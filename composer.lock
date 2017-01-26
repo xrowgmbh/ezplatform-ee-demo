@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cd17b3b955bc8740b9206f9fe89338c5",
-    "content-hash": "f558f8ad3a83b08ce49e3f55965768d4",
+    "hash": "16b9111dea377048685db2e7b64ca5b1",
+    "content-hash": "0f11a2417a6c4d1fde6f9a8bd74b2353",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -1135,16 +1135,16 @@
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v6.7.1-rc1",
+            "version": "v6.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "e561f0a485c5902ac78e17c57743abc1e080654d"
+                "reference": "9704a035100fd26b43998c0f0bd1bd2644dcbd4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/e561f0a485c5902ac78e17c57743abc1e080654d",
-                "reference": "e561f0a485c5902ac78e17c57743abc1e080654d",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/9704a035100fd26b43998c0f0bd1bd2644dcbd4d",
+                "reference": "9704a035100fd26b43998c0f0bd1bd2644dcbd4d",
                 "shasum": ""
             },
             "require": {
@@ -1217,7 +1217,7 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "http://share.ez.no",
-            "time": "2017-01-23 13:37:27"
+            "time": "2017-01-24 09:51:09"
         },
         {
             "name": "ezsystems/ezstudio-cron",
@@ -1353,7 +1353,7 @@
         },
         {
             "name": "ezsystems/ezstudio-form-builder",
-            "version": "v1.0.1-rc1",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/ezstudio-form-builder.git",
@@ -1634,7 +1634,7 @@
         },
         {
             "name": "ezsystems/platform-ui-bundle",
-            "version": "v1.7.1-rc1",
+            "version": "v1.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/PlatformUIBundle.git",
@@ -1840,17 +1840,17 @@
         },
         {
             "name": "ezsystems/studio-ui-bundle",
-            "version": "v1.7.1-rc1",
+            "version": "v1.7.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/StudioUIBundle.git",
-                "reference": "810c241929369681fd016428123a357439a0a4f5"
+                "reference": "384b25891b138da19ee22d12188676440a5309c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-studio-ui-bundle-810c241929369681fd016428123a357439a0a4f5-zip-9e0dde.zip",
-                "reference": "810c241929369681fd016428123a357439a0a4f5",
-                "shasum": "c8ddab1781370fc34b2dab8cef1ba6c05946472e"
+                "url": "https://updates.ez.no/ttl/dist/ezsystems-studio-ui-bundle-384b25891b138da19ee22d12188676440a5309c9-zip-bfd5e5.zip",
+                "reference": "384b25891b138da19ee22d12188676440a5309c9",
+                "shasum": "48b1160da9d29385767f62ad37fba66a7dde6ec2"
             },
             "require": {
                 "ezsystems/ezpublish-kernel": "^6.7",
@@ -1879,7 +1879,7 @@
                 "source": "https://github.com/ezsystems/StudioUIBundle/tree/1.7",
                 "issues": "https://github.com/ezsystems/StudioUIBundle/issues"
             },
-            "time": "2017-01-11 13:45:58"
+            "time": "2017-01-24 14:07:23"
         },
         {
             "name": "friendsofsymfony/http-cache",
@@ -7468,12 +7468,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "ezsystems/ezpublish-kernel": 5,
-        "ezsystems/platform-ui-bundle": 5,
-        "ezsystems/studio-ui-bundle": 5,
-        "ezsystems/ezstudio-form-builder": 5
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
