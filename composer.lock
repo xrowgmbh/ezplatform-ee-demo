@@ -942,16 +942,16 @@
         },
         {
             "name": "ezsystems/content-on-the-fly-prototype",
-            "version": "v0.1.9",
+            "version": "v0.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/content-on-the-fly-prototype-bundle.git",
-                "reference": "2a5bd93325d7a6fbd589291fcba77dd362c7ebbb"
+                "reference": "2d52dc5da386005198023ad7e0744d695d0217ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/content-on-the-fly-prototype-bundle/zipball/2a5bd93325d7a6fbd589291fcba77dd362c7ebbb",
-                "reference": "2a5bd93325d7a6fbd589291fcba77dd362c7ebbb",
+                "url": "https://api.github.com/repos/ezsystems/content-on-the-fly-prototype-bundle/zipball/2d52dc5da386005198023ad7e0744d695d0217ed",
+                "reference": "2d52dc5da386005198023ad7e0744d695d0217ed",
                 "shasum": ""
             },
             "require": {
@@ -984,7 +984,7 @@
                 }
             ],
             "description": "Platform UI Content on the Fly feature",
-            "time": "2017-04-18T09:59:11+00:00"
+            "time": "2017-05-09T11:56:56+00:00"
         },
         {
             "name": "ezsystems/date-based-publisher",
@@ -6414,7 +6414,7 @@
                 {
                     "name": "Anthon Pang",
                     "email": "apang@softwaredevelopment.ca",
-                    "role": "Fork maintainer"
+                    "role": "Fork Maintainer"
                 }
             ],
             "description": "PHP WebDriver for Selenium 2",
