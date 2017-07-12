@@ -27,6 +27,7 @@
                     outputTypeId: '{{ outputTypeId }}',
                     contextItems: '{{ contentId }}',
                     categoryPath: '{{ categoryPath }}',
+                    filters: '{{ filters is defined ? filters: '' }}',
                     fields: [{% for entry in fields %}'{{ entry }}', {% endfor %}],
                     errorMessage: defaultArticlesListContent,
                     notSupportedMessage: '{{ 'Cannot display recommendations, your browser is not supported'|trans }}',
@@ -52,7 +53,7 @@
                         if (!context[idx].attr.title) {
                             context[idx].attr.title = mockups.data[idx].name;
                             context[idx].attr.image = mockups.data[idx].image;
-                            context[idx].attr.url = mockups.data[idx].url;
+                            context[idx].attr.uri = mockups.data[idx].uri;
                             context[idx].attr.isRandom = true;
                         }
                     }
