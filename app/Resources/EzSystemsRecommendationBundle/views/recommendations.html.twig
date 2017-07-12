@@ -24,7 +24,7 @@
                 {% verbatim %}' this}}
 
                 {{#each this}}
-                    <a href="{{attr.url}}"{{#unless attr.isRandom}} onclick="return eZ.RecommendationRestClient.ping('{{clickRecommended}}')"{{/unless}}>
+                    <a href="{{attr.uri}}"{{#unless attr.isRandom}} onclick="return eZ.RecommendationRestClient.ping('{{clickRecommended}}')"{{/unless}}>
                         <article class="class-article col-sm-4">
                             <div class="recommendations-article">
                                 <div class="col-sm-4 recommendations-thumbnail" style="background-image: url('{{attr.image}}');">
