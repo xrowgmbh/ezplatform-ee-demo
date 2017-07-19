@@ -34,3 +34,7 @@ parameters:
 
     # Location id of the content item for form uploads
     form_builder.upload_folder.location_id: 250
+
+    # Settings for HttpCache
+    purge_type: "local"
+    purge_server: "http://my.varnish.server:80"

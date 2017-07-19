@@ -107,3 +107,9 @@ if ($value = getenv('RECOMMENDATIONS_LICENSE_KEY')) {
 if ($value = getenv('PUBLIC_SERVER_URI')) {
     $container->setParameter('ez_recommendation.default.server_uri', $value);
 }
+
+// HttpCache setting (for configuring Varnish purging)
+if ($purgeServer = getenv('HTTPCACHE_PURGE_SERVER')) {
+    $container->setParameter('purge_type', 'http');
+    $container->setParameter('purge_server', $purgeServer);
+}
