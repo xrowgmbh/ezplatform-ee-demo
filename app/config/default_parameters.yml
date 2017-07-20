@@ -31,3 +31,7 @@ parameters:
 
     # Content types included in Recommendations from YooChoose account
     ez_recommendation.default.recommender.included_content_types: [blog, article, place]
+
+    # Settings for HttpCache
+    purge_type: "local"
+    purge_server: "http://my.varnish.server:80"
