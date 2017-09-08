@@ -63,7 +63,8 @@
         "ezsystems/ezplatform-multi-file-upload": "^0.1.0@dev",
         "willdurand/js-translation-bundle": "^2.6.4",
         "netgen/tagsbundle": "^3.0",
-        "novactive/ezseobundle": "^2.0"
+        "novactive/ezseobundle": "^2.0",
+        "roave/security-advisories": "dev-master"
     },
     "require-dev": {
         "ezsystems/ezplatform-i18n": "^1.0@dev",
