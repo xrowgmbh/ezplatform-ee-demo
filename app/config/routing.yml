@@ -50,3 +50,8 @@ ezplatform.ee.landing_page:
 
 fos.js_routing:
     resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
+
+_novaezseoRoutes:
+    resource: "@NovaeZSEOBundle/Controller/"
+    type:     annotation
+    prefix:   /

@@ -83,3 +83,6 @@ parameters:
 
     # Admin siteaccess group name
     admin_group_name: admin_group
+
+    # Location id of the content item for form uploads
+    form_builder.upload_folder.location_id: 250

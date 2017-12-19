@@ -14,9 +14,9 @@ ezpublish:
 
     # Siteaccess configuration, with one siteaccess per default
     siteaccess:
-        list: [site, admin]
+        list: [site, admin, fr, de, no]
         groups:
-            site_group: [site]
+            site_group: [site, fr, de, no]
 
             # WARNING: Do not remove or rename this group.
             # It's used to distinguish common siteaccesses from admin ones.
