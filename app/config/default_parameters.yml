@@ -86,3 +86,58 @@ parameters:
 
     # Location id of the content item for form uploads
     form_builder.upload_folder.location_id: 250
+
+    # Application
+
+    ## Footer
+    # Limit for latest content in footer.
+    app.footer.latest_content.limit: 7
+    # LocationId for footer content object.
+    app.footer.content_id: 58
+    # ContentType identifiers we want to have in "latest content" part of the footer.
+    app.footer.latest_content.content_types: [article]
+    # Number of blog_posts displayed per page in the blog view
+    app.blog.blog_post_list.limit: 10
+    # Number of article displayed per page in the folder view
+    app.folder.folder_list.limit: 8
+    # ContentType identifiers we want to exclude from content list in folder view
+    app.folder.folder_view.excluded_content_types: [image]
+    # ContentType identifiers we want to have in folder's tree
+    app.folder.folder_tree.included_content_types: [folder]
+    # Decide whether to show or hide article summary in the full view
+    app.article.full_view.show_summary: true
+    # Decide whether to show or hide article image in the full view
+    app.article.full_view.show_image: true
+    # Minimum distance in km for the places lookup
+    app.places.place_list.min: 0
+    # Maximum distance in km for the places lookup
+    app.places.place_list.max: 20000
+
+    # List of content types to be displayed in the place list
+    app.places.place_list.content_types: [place]
+
+    ## Feedback Form
+    # Reminder: You can override these settings in config_dev.yml or config_prod.yml for debug or prod
+    # Email address to send contact form emails to
+    app.feedback_form.email_to: root@localhost
+    # Email address displayed as sent
+    app.feedback_form.email_from: noreply@appbundle.test
+
+    ## Search Page
+    # Number of results displayed per page in the simple search
+    app.search.list.limit: 10
+    app.search.list.content_types: ['article', 'place', 'blog_post', 'product']
+
+    #menu.default.menucontentsettings.topidentifierlist: [landing_page, blog, about, subscribe, product_list]
+    menu.default.menucontentsettings.topidentifierlist: [landing_page, folder, blog, about, subscribe, product_list]
+
+    # Location Ids of allowed user groups for viewing Articles with premium content
+    app.premium_content.allowed_user_groups.location_ids: [12, 13, 14]
+
+    # SEO default values
+    app.default.seo:
+        -
+          default_keywords: 'food, recipe, cuisine, drink, travel, voyage, world, country, magazine, blog'
+
+
+    eztags.default.tag_view.pagelayout: '::pagelayout.html.twig'

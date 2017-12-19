@@ -1,0 +1,12 @@
+<form class="ezs-form up-form-userprofiling pure-form">
+    <h3 class="ezs-form__title">{{ title }}</h1>
+    <p class="ezs-form__desc">{{ description }}</p>
+
+    <fieldset class="ezs-form__fields pure-group"></fieldset>
+
+    <div class="ezs-form__btns">
+        <a href="#" class="ezs-form__btn--cancel">{{ btnCancelText }}</a>
+        <button class="ezs-form__btn--submit" type="submit">{{ btnSubmitText }}</button>
+        <button class="ezs-form__btn--close" type="button">{{ btnCloseText }}</button>
+    </div>
+</form>

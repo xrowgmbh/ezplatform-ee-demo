@@ -1,0 +1,165 @@
+{% extends "::pagelayout.html.twig" %}
+
+{% block content %}
+    {% set wrapper = 'map' %}
+    <section class="place_list">
+        {% if not ez_is_field_empty(content, 'image') %}
+            {% set imageAlias = ez_image_alias(content.getField('image'), content.versionInfo, 'header') %}
+            <div class="col-md-12 section-header" style="background-image: url('{{ imageAlias.uri }}');">
+        {% else %}
+            <div class="col-md-12 section-header">
+        {% endif %}
+                <div class="header-title">{{ ez_content_name(content) }}</div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-5 col-md-offset-7">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-md-7 control-label" for="formGroupInputLarge">{{ 'Find locations within'|trans }}</label>
+                        <div class="col-sm-5">
+                            <select class="form-control" id="show-within">
+                                <option value="" disabled selected>{{ 'Select distance'|trans }}</option>
+                                <option value="100">100 km</option>
+                                <option value="1000">1000 km</option>
+                                <option value="2500">2500 km</option>
+                                <option value="5000">5000 km</option>
+                                <option value="10000">10 000 km</option>
+                                <option value="all">{{ 'Show all places'|trans }}</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row place-list">
+            {% if contentArray|length > 0 %}
+                {% for content in contentArray %}
+                    {{ render(controller('ez_content:viewContent', {
+                        'contentId': content.versionInfo.contentInfo.id,
+                        'viewType': 'line'
+                    })) }}
+                {% endfor %}
+            {% endif %}
+        </div>
+
+        <div class="col-md-12">
+            <a href="#{{ wrapper }}" id="place-list-display" class="btn btn-default btn-block btn-large">{{ 'View  on a map'|trans }}</a>
+        </div>
+
+        <div class="col-md-12">
+            <div id="{{ wrapper }}" class="place-list-wrapper"></div>
+        </div>
+
+    </section>
+    <script>
+        {% autoescape 'js' %}
+        function initMap() {
+            var latLngs{{ id }} = [
+                    {% if contentArray|length > 0 %}
+                        {% for content in contentArray %}
+                            {
+                                id: {{ content.versionInfo.contentInfo.id }},
+                                name: '{{ ez_render_field(content, "name") }}',
+                                lat: {{ ez_field_value( content, 'location' ).latitude }},
+                                lng: {{ ez_field_value( content, 'location' ).longitude }}
+                            }{% if loop.index < contentArray|length %}, {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                ],
+                bounds = new google.maps.LatLngBounds(),
+                infowindow = new google.maps.InfoWindow(),
+                map = new google.maps.Map(document.getElementById('{{ wrapper }}'), {
+                    zoom: 2,
+                    center: {lat: 0, lng: 0}
+                }),
+                places = $('[id^="placeid-"]'),
+                markers = [];
+
+            function placeMarker(place, i) {
+                var marker = new google.maps.Marker({
+                    position: {lat: place.lat, lng: place.lng},
+                    map: map,
+                    title: place.name,
+                    animation: google.maps.Animation.DROP
+                });
+
+                bounds.extend(marker.position);
+
+                google.maps.event.addListener(marker, 'click', (function (marker, i) {
+                    return function () {
+                        infowindow.setContent(place.name);
+                        infowindow.open(map, marker);
+                    }
+                })(marker, i));
+
+                markers.push(marker);
+            }
+
+            function showPosition(position) {
+                var range = $('#show-within').val() * 1000;
+
+                places.hide();
+
+                for (var i = 0; i < latLngs{{ id }}.length; i++) {
+                    var distance = computeDistance(position.coords, latLngs{{ id }}[i]);
+
+                    if (distance < range) {
+                        placeMarker(latLngs{{ id }}[i], i);
+                        map.fitBounds(bounds);
+                        $('#placeid-' + latLngs{{ id }}[i].id).show();
+                    }
+                }
+            }
+
+            function computeDistance(from, to) {
+                var fromObj = new google.maps.LatLng(from.latitude, from.longitude),
+                    toObj = new google.maps.LatLng(to.lat, to.lng);
+
+                return google.maps.geometry.spherical.computeDistanceBetween(fromObj, toObj);
+            }
+
+            function placeAllMarkers() {
+                places.show();
+                removeMarkers();
+
+                for (var i = 0; i < latLngs{{ id }}.length; i++) {
+                    placeMarker(latLngs{{ id }}[i], i);
+                }
+                map.fitBounds(bounds);
+            }
+
+            function removeMarkers() {
+                for (var i = 0; i < markers.length; i++) {
+                    markers[i].setMap(null);
+                }
+                markers.length = 0;
+            }
+
+            $('#place-list-display').click(placeAllMarkers);
+
+            $('#show-within').change(function () {
+                removeMarkers();
+
+                if ($(this).val() === 'all') {
+                    placeAllMarkers();
+                } else {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(showPosition);
+                    }
+                }
+            });
+
+            google.maps.event.addDomListener(window, "resize", function() {
+                var center = map.getCenter();
+
+                google.maps.event.trigger(map, "resize");
+                map.setCenter(center);
+                map.fitBounds(bounds);
+            });
+        }
+        {% endautoescape %}
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap&amp;libraries=geometry"></script>
+{% endblock %}

@@ -1,0 +1,10 @@
+<video width="100%" controls poster="{{ ez_field_value(content, "thumbnail").uri }}">
+    <source src="{{ ez_field_value(content, "file") }}" type="video/mp4">
+    <source src="{{ ez_field_value(content, "file") }}" type="video/ogg">
+    {{ 'Your browser doesn\'t support HTML5 video.'|trans }}
+</video>
+{% if not ez_is_field_empty(content, 'caption') %}
+<div class="content-video-caption">
+    {{ ez_render_field(content, 'caption') }}
+</div>
+{% endif %}

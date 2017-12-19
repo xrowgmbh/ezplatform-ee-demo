@@ -1,0 +1,9 @@
+{% for block in blocks %}
+    <div class="landing-page__block block_{{ block.type }}">
+        {{ render_esi(controller('ez_block:renderBlockAction', {
+            'contentId': contentInfo.id,
+            'blockId': block.id,
+            'versionNo': versionInfo.versionNo
+        })) }}
+    </div>
+{% endfor %}

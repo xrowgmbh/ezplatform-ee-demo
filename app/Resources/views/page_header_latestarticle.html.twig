@@ -1,0 +1,21 @@
+<div class="row last-article">
+    <div class="col-sm-offset-1 col-sm-3">
+        <i>{{ 'Our latest article'|trans }}</i>
+    </div>
+    <a href="{{ path(location) }}">
+        <div class="col-sm-5">
+            <h4>
+                <span class="title">{{ ez_field_value(article, "title") }}</span>
+                by&nbsp;<span class="author">{{ ez_field_value(article, "author") }}</span>
+            </h4>
+        </div>
+        <div class="col-sm-3">
+            {{ ez_render_field(article, 'image', {
+                "parameters": {
+                    "alias": 'latest_article',
+                    "alt": ez_field_value(article, "title")
+                }
+            }) }}
+        </div>
+    </a>
+</div>

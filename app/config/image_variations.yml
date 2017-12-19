@@ -1,0 +1,120 @@
+ezpublish:
+    system:
+        default:
+            image_variations:
+                latest_article:
+                    reference: null
+                    filters:
+                        - {name: geometry/crop, params: [600, 600, 0, 0]}
+                        - {name: geometry/scalewidth, params: [70]}
+
+                cuisine:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [300]}
+                        - {name: geometry/crop, params: [250, 200, 0, 0]}
+
+                header:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [1200]}
+
+                embed-header:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleheight, params: [500]}
+                        - {name: geometry/crop, params: [1100, 500, 650, 0]}
+
+                place_list:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [420, 370] }
+
+                place:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [420, 370] }
+                        - { name: geometry/crop, params: [420, 270, 0, 0] }
+
+
+                place_large:
+                    reference: null
+                    filters:
+                        - { name: geometry/scalewidth, params: [1200] }
+                        - { name: geometry/crop, params: [1200, 500, 0, 0] }
+
+                article_list:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [420, 370] }
+
+                article:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [420, 370] }
+
+                article_large:
+                    reference: null
+                    filters:
+                        - { name: geometry/scalewidth, params: [1200] }
+                        - { name: geometry/crop, params: [1200, 500, 0, 0] }
+
+                article_full_width:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [970, 600] }
+
+                blog_post_list:
+                    reference: null
+                    filters:
+                        - { name: geometry/scalewidth, params: [1000] }
+                        - { name: geometry/crop, params: [1000, 400, 0, 0] }
+
+                blog_post_large:
+                    reference: null
+                    filters:
+                        - { name: geometry/scalewidth, params: [1000] }
+
+                gallery:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaleexact, params: [960, 647] }
+
+                cuisines-gallery:
+                    reference: null
+                    filters:
+                        - { name: geometry/scalewidth, params: [1100] }
+                        - { name: geometry/crop, params: [1100, 400, 0, 0] }
+
+                related:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleheight, params: [300]}
+                        - {name: geometry/crop, params: [300, 300, 0, 0]}
+
+                card:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [400]}
+                        - {name: geometry/crop, params: [250, 200, 0, 0]}
+
+                product_card:
+                    reference: null
+                    filters:
+                        - {name: geometry/scalewidth, params: [350]}
+                        - {name: geometry/crop, params: [350, 290, 0, 0]}
+
+                product_large:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [505, 400]}
+
+                search_result_item:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [125, 125]}
+
+                search_result_item_large:
+                    reference: null
+                    filters:
+                        - {name: geometry/scaleexact, params: [505, 400]}

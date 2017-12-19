@@ -43,6 +43,7 @@ class AppKernel extends Kernel
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
             new EzSystems\EzPlatformDesignEngineBundle\EzPlatformDesignEngineBundle(),
+            new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
             // Dependencies
             new Netgen\TagsBundle\NetgenTagsBundle(),
             // Application

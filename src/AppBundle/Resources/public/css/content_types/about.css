@@ -1,0 +1,14 @@
+.about-column,
+.subscribe-column {
+    padding: 60px;
+    color: #555;
+}
+
+.about-column strong,
+.subscribe-column strong {
+    font-size: 30px;
+}
+
+.about-column h2 {
+    font-weight: bold;
+}

@@ -4,7 +4,14 @@ imports:
     - { resource: security.yml }
     - { resource: env/generic.php }
     - { resource: env/platformsh.php }
+    - { resource: default_layouts.yml }
+    - { resource: views.yml }
+    - { resource: image_variations.yml }
+    - { resource: field_templates.yml }
+    - { resource: ezcomments.yml }
+    - { resource: nova_ezseo.yml }
     - { resource: services.yml }
+    - { resource: services/ }
 
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
@@ -84,7 +91,7 @@ twig:
 assetic:
     debug: '%kernel.debug%'
     use_controller: '%kernel.debug%'
-    bundles: [ EzPlatformAdminUiBundle ]
+    bundles: [ EzPlatformAdminUiBundle, NetgenTagsBundle ]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~

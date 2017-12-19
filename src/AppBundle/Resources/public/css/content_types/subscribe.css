@@ -1,0 +1,77 @@
+form.subscribe-form strong {
+    border-top: 1px solid #eee;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    margin: 25px 0;
+    padding-top: 20px;
+    display: block;
+    letter-spacing: 2px;
+}
+
+.subscribe-form h1 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subscribe-form input[type=checkbox] {
+    display: inline;
+}
+
+.subscribe-form label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+}
+
+.subscribe-form button[type=submit] {
+    background: #4375F1;
+    color: #fff;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 4px;
+    width: 150px;
+    letter-spacing: 2px;
+    border: none;
+    font-size: 12px;
+    padding: 10px 12px;
+    margin: 20px 0;
+}
+
+.subscribe-form button[type=submit]:hover {
+    background: #34B12F;
+}
+
+.subscribe-form select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    background: url('/bundles/ezstudiodemo/images/arrow-select-down.svg') no-repeat 98% 8px #eee;
+}
+
+.subscribe-form {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.subscribe-form input[type=text],
+.subscribe-form input[type=email],
+.subscribe-form input[type=country],
+.subscribe-form select {
+    display: block;
+    background: #eee;
+    border-radius: 4px;
+    padding: 8px 12px;
+    width: 100%;
+    margin-bottom: 18px;
+    border-left: 1px solid #EBEBEB;
+    border-top: 1px solid #DCDCDC;
+    border-right: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: #868888;
+}

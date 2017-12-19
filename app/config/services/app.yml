@@ -1,0 +1,114 @@
+services:
+    # menu
+    app.menu.builder:
+        class: AppBundle\Menu\Builder
+        arguments:
+            - '@knp_menu.factory'
+            - '@ezpublish.api.service.search'
+            - '@router'
+            - '@ezpublish.config.resolver'
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.translation_helper'
+
+    app.menu.top:
+        class: AppBundle\Menu\Builder
+        factory: ['@app.menu.builder', createTopMenu]
+        #arguments: ['@request']
+        scope: request
+        tags:
+            - { name: knp_menu.menu, alias: top }
+
+
+    # criteria
+    app.criteria_helper:
+        class: AppBundle\Helper\CriteriaHelper
+
+
+    # entity
+    app.entity.simple_search:
+        class: AppBundle\Entity\SimpleSearch
+
+    app.entity.subscription:
+        class: AppBundle\Entity\Subscription
+
+
+    # form type
+    app.form.type.simple_search:
+        class: AppBundle\Form\Type\SimpleSearchType
+        tags:
+            - { name: form.type, alias: app_simple_search }
+
+    app.form.type.signup:
+        class: AppBundle\Form\Type\SignUpType
+        tags:
+            - { name: form.type, alias: app_signup }
+
+    app.form.type.user_preferences:
+        class: AppBundle\Form\Type\UserPreferencesType
+        arguments: ['@app.user.user_interests']
+        tags:
+            - { name: form.type }
+
+
+    # form
+    app.form.search.simple:
+        class: AppBundle\Form\Search\Simple
+        arguments:
+            - '@app.entity.simple_search'
+            - '@app.form.type.simple_search'
+            - '@form.factory'
+
+    app.form.signup.form:
+        class: AppBundle\Form\SignUp\Form
+        arguments:
+            - '@app.entity.subscription'
+            - '@app.form.type.signup'
+            - '@form.factory'
+
+    # twig
+    app.twig.premium_content_extension:
+        class: AppBundle\Twig\PremiumContentExtension
+        arguments:
+            - '@ezpublish.api.repository'
+            - '@security.token_storage'
+            - '%app.premium_content.allowed_user_groups.location_ids%'
+        tags:
+            - { name: twig.extension }
+
+    app.twig.user_tags_extension:
+        class: AppBundle\Twig\UserTagsExtension
+        arguments:
+            - '@app.user.user_interests'
+        tags:
+            - { name: twig.extension }
+
+    # security
+    app.event_listener.login:
+        class: AppBundle\EventListener\Login
+        arguments:
+            - '@security.authorization_checker'
+            - '@event_dispatcher'
+            - '@router'
+            - '@app.user.user_interests'
+        tags:
+            - { name: kernel.event_listener, event: security.interactive_login }
+
+    # other
+    app.permission_resolver:
+        class: 'eZ\Publish\Core\Repository\Permission\PermissionResolver'
+        factory: ['@ezpublish.api.inner_repository', 'getPermissionResolver']
+
+    app.user.user_interests:
+        class: AppBundle\User\UserInterests
+        arguments:
+            - '@security.token_storage'
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.content_type'
+            - '@ezpublish.api.service.user'
+            - '@app.permission_resolver'
+            - '@ezpublish.api.service.tags'
+
+    app.seo.fallback:
+        class: AppBundle\Seo\CustomFallback
+        arguments:
+            - '@=service("ezpublish.config.resolver").getParameter("seo", "app")[0]'

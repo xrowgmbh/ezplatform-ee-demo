@@ -1,0 +1,41 @@
+.place-list {
+    padding: 20px;
+}
+
+.place-list .place {
+    margin-bottom: 20px;
+    min-height: 330px;
+}
+
+.place-list-wrapper {
+    margin: 10px 0;
+}
+
+#place-list-display {
+    background: transparent;
+    border: 2px solid #333;
+    border-radius: 15px;
+    font-size: smaller;
+    text-transform: uppercase;
+    width: 70%;
+    margin: 10px auto;
+}
+
+.map-wrapper {
+    display: none;
+}
+
+.block-map .btn-block {
+    font-size: small;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+
+#show-within {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    border-radius: 30px;
+    font-size: smaller;
+    text-transform: uppercase;
+}

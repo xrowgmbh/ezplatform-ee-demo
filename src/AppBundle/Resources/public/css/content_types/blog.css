@@ -1,0 +1,50 @@
+.tags-content,
+.blog {
+    margin-bottom: 80px;
+}
+
+.tags-content .blog-post,
+.blog .blog-post {
+    background: #999;
+    border-top: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    height: 400px;
+    padding-top: 20px;
+}
+
+.tags-content .blog-post-header,
+.blog .blog-post-header {
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.tags-content .blog-post-header h3,
+.blog-post-header h3 {
+    color: #fff;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+.tags-content .blog-post a,
+.blog .blog-post a {
+    background: rgba(0, 0, 0, 0.6);
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tags-content .blog-post-title,
+.blog .blog-post-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.tags-content .blog-post-date,
+.blog .blog-post-date {
+    color: #fff;
+    font-size: 14px;
+    font-style: italic;
+}

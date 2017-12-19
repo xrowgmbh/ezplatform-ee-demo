@@ -1,0 +1,140 @@
+.product-back {
+    width: 100%;
+    background: #fff;
+    padding: 10px 20px;
+}
+
+.product-back a:link,
+.product-back a:visited {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-back .glyphicon {
+    font-size: 14px;
+}
+
+.product-main {
+    display: table;
+    width: 100%;
+    background: #fff;
+    margin: 20px 0;
+    padding: 10px 10px 40px;
+}
+
+.product-main .row {
+    margin: 0;
+}
+
+.product-main-title {
+    padding: 0;
+}
+
+.product-main h2 {
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.product-main h3 {
+    border-bottom: 1px solid #9b9b9b;
+    padding-bottom: 5px;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.product-main-description {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.product-main-ingredients {
+    margin-left: 20px;
+}
+
+.product-main-ingredients ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.product-main-image {
+    padding: 20px 0 20px 35px;
+}
+
+.product-main-price,
+.product-main-serving {
+    font-size: 18px;
+    font-weight: 600;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+.product-main-serving-icon {
+    background: url('/bundles/ezstudiodemo/images/product/serving.svg') no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.product-main .glyphicon-plus {
+    font-size: 0.85em;
+    top: 0;
+}
+
+.product-main .btn {
+    margin-bottom: 20px;
+}
+
+.product-main-add {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.product-main-dietary {
+    background: #f3f3f3;
+    padding: 8px 15px;
+    width: 105px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.product-main-dietary-icon {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-bottom: -3px;
+}
+
+.product-main-dietary-dairy-icon {
+    background: url('/bundles/ezstudiodemo/images/product/dairy.svg') no-repeat;
+}
+
+.product-main-dietary-egg-icon {
+    background: url('/bundles/ezstudiodemo/images/product/egg.svg') no-repeat;
+}
+
+.product-main-dietary-nuts-icon {
+    background: url('/bundles/ezstudiodemo/images/product/nuts.svg') no-repeat;
+}
+
+.product-main-dietary-gluten-icon {
+    background: url('/bundles/ezstudiodemo/images/product/gluten.svg') no-repeat;
+}
+
+.product-main-dietary-seafood-icon {
+    background: url('/bundles/ezstudiodemo/images/product/seafood.svg') no-repeat;
+}
+
+.product-main-spicy-pepper {
+    background: url('/bundles/ezstudiodemo/images/product/spicy.svg') no-repeat;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+}
+
+.product-main-spicy {
+    margin-top: 25px;
+}

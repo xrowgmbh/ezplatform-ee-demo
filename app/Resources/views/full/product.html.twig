@@ -1,0 +1,123 @@
+{% extends noLayout ? viewbaseLayout : "::pagelayout.html.twig" %}
+
+{% block content %}
+    {% include ':parts:product_modal_dialog.html.twig' %}
+
+    <div class="container">
+        <div class="product-back">
+
+            {% set parentUrl = '' %}
+            {% if not location.isDraft %}
+                {% set parentUrl = path('ez_urlalias', {'locationId': location.parentLocationId}) %}
+            {% endif %}
+            <a href="{{ parentUrl }}">
+                <span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span> {{ 'Back to menu'|trans }}
+            </a>
+
+        </div>
+
+        <div class="product-main">
+            <div class="row">
+                <div class="col-md-6 product-main-image">
+                    {% if not ez_is_field_empty(content, 'image') %}
+                        {{ ez_render_field(content, 'image', {
+                            'parameters': {
+                                'alias': 'product_large',
+                                'class': 'img-responsive'
+                            }
+                        }) }}
+                    {% endif %}
+                </div>
+
+                <div class="col-md-6">
+                    {% set spicy_level = ez_field_value(content, 'spicy').selection.0 %}
+
+                    <div class="row">
+                        <div class="col-md-{% if spicy_level > 0 %}9{% else %}12{% endif %} product-main-title">
+                            <h2>{{ ez_content_name(content) }}</h2>
+                        </div>
+
+                        {% if spicy_level > 0 %}
+                            <div class="col-md-3 text-right product-main-spicy">
+                                {% for level in 1..spicy_level %}
+                                    <div class="product-main-spicy-pepper"></div>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <div class="product-main-description">
+                        {{ ez_render_field(content, 'description') }}
+                    </div>
+
+                    <div class="col-md-3 col-xs-4 product-main-price">
+                        $ {{ ez_field_value(content, 'price').value|number_format(2, '.') }}
+                    </div>
+                    <div class="col-md-9 col-xs-5 product-main-serving">
+                        <div class="product-main-serving-icon"></div> {{ ez_render_field(content, 'serving') }} {{ 'servings'|trans }}
+                    </div>
+
+                    <div class="col-md-12 col-xs-3 product-main-add">
+                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addModal">
+                            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> {{ 'Add'|trans }}
+                        </button>
+                    </div>
+
+                    <h3 class="clearfix">{{ 'Dietary restrictions'|trans }}</h3>
+
+                    {% if ez_field_value(content, 'dairy').bool %}
+                        <div class="product-main-dietary">
+                            <div class="product-main-dietary-icon product-main-dietary-dairy-icon"></div> {{ 'Dairy'|trans }}
+                        </div>
+                    {% endif %}
+
+                    {% if ez_field_value(content, 'egg').bool %}
+                        <div class="product-main-dietary">
+                            <div class="product-main-dietary-icon product-main-dietary-egg-icon"></div> {{ 'Egg'|trans }}
+                        </div>
+                    {% endif %}
+
+                    {% if ez_field_value(content, 'nuts').bool %}
+                        <div class="product-main-dietary">
+                            <div class="product-main-dietary-icon product-main-dietary-nuts-icon"></div> {{ 'Nuts'|trans }}
+                        </div>
+                    {% endif %}
+
+                    {% if ez_field_value(content, 'gluten').bool %}
+                        <div class="product-main-dietary">
+                            <div class="product-main-dietary-icon product-main-dietary-gluten-icon"></div> {{ 'Gluten'|trans }}
+                        </div>
+                    {% endif %}
+
+                    {% if ez_field_value(content, 'seafood').bool %}
+                        <div class="product-main-dietary">
+                            <div class="product-main-dietary-icon product-main-dietary-seafood-icon"></div> {{ 'Seafood'|trans }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>{{ 'Ingredients'|trans }}</h3>
+
+                    <div class="product-main-ingredients">
+                        {{ ez_render_field(content, 'ingredients') }}
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>{{ 'Cooking instructions'|trans }}</h3>
+
+                    <div class="product-main-instruction">
+                        {{ ez_render_field(content, 'cooking_instructions') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-12 content-tags">
+                {{ ez_render_field(content, 'tags') }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

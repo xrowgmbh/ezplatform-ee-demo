@@ -1,0 +1,367 @@
+ezpublish:
+    system:
+        admin_group:
+            content_view:
+                default:
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [landing_page]
+
+                # TODO: tmp solution - implement tag link redirect to tags admin
+                search_result_item:
+                    article:
+                        template: ":search_result_item:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":search_result_item:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    product:
+                        template: ":search_result_item:product.html.twig"
+                        match:
+                            Identifier\ContentType: [product]
+                    blog_post:
+                        template: ":search_result_item:default.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":search_result_item:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, blog, folder, place_list, video, landing_page]
+
+        site_group:
+            pagelayout: ::pagelayout.html.twig
+
+            field_templates:
+                - {template: ":fields:eztags_field.html.twig", priority: 20}
+
+            user:
+                layout: ::pagelayout.html.twig
+                login_template: ":user:login.html.twig"
+
+            user_registration:
+                templates:
+                    form: ":user:registration_form.html.twig"
+                    confirmation: ":user:registration_confirmation.html.twig"
+
+            content_view:
+                cover:
+                    article:
+                        template: ":cover:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":cover:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    blog_post:
+                        template: ":cover:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, folder, landing_page, blog, place_list, frontpage, video, product]
+
+                cover_container:
+                    article:
+                        template: ":cover_container:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":cover_container:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    blog_post:
+                        template: ":cover_container:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, folder, landing_page, blog, place_list, frontpage, video, product]
+                grid-main:
+                    article:
+                        template: ":grid-main:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":grid-main:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    blog_post:
+                        template: ":grid-main:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, folder, landing_page, blog, place_list, frontpage, video]
+                grid-2:
+                    article:
+                        template: ":grid-2:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":grid-2:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    blog_post:
+                        template: ":grid-2:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, folder, landing_page, blog, place_list, frontpage, video]
+
+                grid-4:
+                    article:
+                        template: ":grid-4:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":grid-4:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    blog_post:
+                        template: ":grid-4:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, folder, landing_page, blog, place_list, frontpage, video]
+
+                grid-list:
+                    article:
+                        template: ":grid-list:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":grid-list:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    blog_post:
+                        template: ":grid-list:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, folder, landing_page, blog, place_list, frontpage, video]
+
+                block_item:
+                    article:
+                        template: ":block_item:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":block_item:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    blog_post:
+                        template: ":block_item:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    image:
+                        template: ":block_item:image.html.twig"
+                        match:
+                            Identifier\ContentType: [image]
+                    folder:
+                        template: ":block_item:folder.html.twig"
+                        match:
+                            Identifier\ContentType: [folder]
+                    place_list:
+                        template: ":block_item:place_list.html.twig"
+                        match:
+                            Identifier\ContentType: [place_list]
+                    video:
+                        template: ":block_item:video.html.twig"
+                        match:
+                            Identifier\ContentType: [video]
+                    product:
+                        template: ":block_item:product.html.twig"
+                        match:
+                            Identifier\ContentType: [product]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [landing_page, blog, frontpage, about]
+
+                full:
+                    landing_page:
+                        template: ":full:landing_page.html.twig"
+                        match:
+                            Identifier\ContentType: "landing_page"
+                    about:
+                        template: ":full:about.html.twig"
+                        match:
+                            Identifier\ContentType: [about]
+                    subscribe:
+                        controller: "app.controller.subscribe:showFormAction"
+                        template: ":full:subscribe.html.twig"
+                        match:
+                            Identifier\ContentType: [subscribe]
+                    article:
+                        controller: "AppBundle:Article:showArticle"
+                        template: ":full:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    blog:
+                        controller: "AppBundle:Blog:listBlogPosts"
+                        template: ":full:blog.html.twig"
+                        match:
+                            Identifier\ContentType: [blog]
+                    blog_post:
+                        controller: "AppBundle:Blog:showBlogPost"
+                        template: ":full:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    frontpage:
+                        template: ":full:landing_page.html.twig"
+                        match:
+                            Identifier\ContentType: [landing_page]
+                    place_list:
+                        controller: "AppBundle:Places:showPlaces"
+                        template: ":full:place_list.html.twig"
+                        match:
+                            Identifier\ContentType: [place_list]
+                    place:
+                        controller: "AppBundle:Places:showPlace"
+                        template: ":full:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    cuisines:
+                        controller: "AppBundle:Folder:showChildren"
+                        template: ":full:cuisines.html.twig"
+                        match:
+                            Identifier\Section: [cuisines]
+                            Identifier\ContentType: [folder]
+                    folder:
+                        controller: "AppBundle:Folder:showChildren"
+                        template: ":full:folder.html.twig"
+                        match:
+                            Identifier\ContentType: [folder]
+                    product_list:
+                        controller: "app.controller.product_controller:contentQueryPaginationAction"
+                        params:
+                            page_limit: 12 # TODO: move value to parameters
+                            view_type: card
+                            query:
+                                query_type: AppBundle:ChildrenList
+                                parameters:
+                                    location_id: '@=location.id'
+                                assign_results_to: content_items
+                        template: ":full:product_list.html.twig"
+                        match:
+                            Identifier\ContentType: [product_list]
+                    product:
+                        template: ":full:product.html.twig"
+                        match:
+                            Identifier\ContentType: [product]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, video]
+
+                line:
+                    article:
+                        controller: "AppBundle:Article:showArticle"
+                        template: ":line:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    blog_post:
+                        template: ":line:blog_post.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    place:
+                        template: ":line:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, blog, folder, place_list, frontpage, video, landing_page]
+
+                search_result_item:
+                    article:
+                        template: ":search_result_item:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                    place:
+                        template: ":search_result_item:place.html.twig"
+                        match:
+                            Identifier\ContentType: [place]
+                    product:
+                        template: ":search_result_item:product.html.twig"
+                        match:
+                            Identifier\ContentType: [product]
+                    blog_post:
+                        template: ":search_result_item:default.html.twig"
+                        match:
+                            Identifier\ContentType: [blog_post]
+                    default:
+                        template: ":search_result_item:default.html.twig"
+                        match:
+                            Identifier\ContentType: [image, blog, folder, place_list, video, landing_page]
+
+                embed:
+                    video:
+                        template: ":embed:video.html.twig"
+                        match:
+                            Identifier\ContentType: [video]
+
+                default:
+                    default:
+                        template: ":default:default.html.twig"
+                        match:
+                            Identifier\ContentType:
+                                - article
+                                - blog_post
+                                - place
+                                - image
+                                - folder
+                                - landing_page
+                                - blog
+                                - place_list
+                                - frontpage
+                                - video
+                                - about
+                                - subscribe
+                                - product
+                                - product_list
+
+                related:
+                    article:
+                        template: ":related:article.html.twig"
+                        match:
+                            Identifier\ContentType: [article]
+                card:
+                    file:
+                        template: ":card:file.html.twig"
+                        match:
+                            Identifier\ContentType: [file]
+                    product:
+                        template: ":card:product.html.twig"
+                        match:
+                            Identifier\ContentType: [product]
+                    default:
+                        template: ":card:default.html.twig"
+                        match:
+                            Identifier\ContentType:
+                                - article
+                                - blog_post
+                                - place
+                                - image
+                                - folder
+                                - landing_page
+                                - blog
+                                - place_list
+                                - frontpage
+                                - video
+                                - about
+                                - subscribe
+                                - product_list

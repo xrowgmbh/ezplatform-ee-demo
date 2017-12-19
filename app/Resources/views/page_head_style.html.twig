@@ -1,0 +1,32 @@
+<link href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic|Montserrat:400,700" rel="stylesheet" type="text/css">
+<link href="//cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.3.2/css/simple-line-icons.css" rel="stylesheet">
+
+{% stylesheets filter='cssrewrite'
+    '%kernel.root_dir%/../vendor/components/bootstrap/css/bootstrap.min.css'
+    'bundles/app/css/studiodemo.css'
+    'bundles/app/css/responsive.css'
+    'bundles/app/css/user_forms.css'
+    'bundles/app/css/content_types/subscribe.css'
+    'bundles/app/css/content_types/about.css'
+    'bundles/app/css/content_types/blog.css'
+    'bundles/app/css/content_types/blog_post.css'
+    'bundles/app/css/content_types/place.css'
+    'bundles/app/css/content_types/article.css'
+    'bundles/app/css/content_types/place_list.css'
+    'bundles/app/css/content_types/product_list.css'
+    'bundles/app/css/content_types/folder.css'
+    'bundles/app/css/content_types/product.css'
+    'bundles/app/css/content_types/user_preferences.css'
+    'bundles/app/css/blocks/contentlist.css'
+    'bundles/app/css/blocks/rss.css'
+    'bundles/app/css/blocks/banner.css'
+    'bundles/app/css/blocks/form.css'
+    'bundles/app/css/blocks/gallery.css'
+    'bundles/app/css/blocks/embed.css'
+    'bundles/app/css/blocks/keyword.css'
+    'bundles/app/css/personalized.css'
+    'bundles/ezsystemspersonalizedblock/css/personalized*.css'
+    'bundles/ezsystemsformbuilder/css/vendors/*/*.css'
+%}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+{% endstylesheets %}

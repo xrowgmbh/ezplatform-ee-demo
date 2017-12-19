@@ -1,0 +1,41 @@
+{% block content %}
+    {% set url = path(location) %}
+    {% set title = ez_content_name(content) %}
+
+    <section class="container item product">
+        <div class="col-md-9 item-info">
+            <div class="item-title">
+                <h2>
+                    <a href="{{ url }}" title="{{ title }}">
+                        {{ ez_render_field(content, 'title') }}
+                    </a>
+                </h2>
+            </div>
+            <div class="hidden-md visible-sm visible-xs item-image-sm">
+                {% if not ez_is_field_empty(content, 'image') %}
+                    <a href="{{ url }}" title="{{ title }}">
+                        {{ ez_render_field(content, 'image', {
+                            'parameters': {
+                                'alias': 'search_result_item_large'
+                            }
+                        }) }}
+                    </a>
+                {% endif %}
+            </div>
+            <div class="item-description">
+                {{ ez_render_field(content, 'description') }}
+            </div>
+        </div>
+        <div class="col-md-3 hidden-sm visible-md visible-lg item-image">
+            {% if not ez_is_field_empty(content, 'image') %}
+                <a href="{{ url }}" title="{{ title }}">
+                    {{ ez_render_field(content, 'image', {
+                        'parameters': {
+                            'alias': 'search_result_item'
+                        }
+                    }) }}
+               </a>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

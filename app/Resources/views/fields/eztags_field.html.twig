@@ -1,0 +1,9 @@
+{% block eztags_field %}
+    <ul class="tags-wrapper eztags-field">
+    {% spaceless %}
+        {% for tag in field.value.tags %}
+            <li><a href="{{ path( tag ) }}">{{ netgen_tags_tag_keyword( tag ) }}</a></li>
+        {% endfor %}
+    {% endspaceless %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,12 @@
+<article class="grid-main">
+    <a href="{{ path( location ) }}">
+        <div class="row">
+            <div class="col-md-6">
+                <h5>{{ ez_content_name( content ) }}</h5>
+                <p>{{ ez_render_field( content, "intro" ) }}</p>
+            </div>
+            <div class="col-md-6 thumb" style="background-image: url({{ ez_field_value(content, 'image').uri }})">
+            </div>
+        </div>
+    </a>
+</article>

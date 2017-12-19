@@ -1,0 +1,49 @@
+{% extends "::pagelayout.html.twig" %}
+
+{% block content %}
+    <section class="folder">
+        {% if not ez_is_field_empty(content, 'image') %}
+            {% set imageAlias = ez_image_alias(content.getField('image'), content.versionInfo, 'header') %}
+            <div class="row section-header" style="background-image: url('{{ imageAlias.uri }}');">
+        {% else %}
+            <div class="row section-header">
+        {% endif %}
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-12 header-title">{{ ez_content_name(content) }}</div>
+                        <div class="col-md-12 header-summary">
+                            {{ ez_render_field(content, 'short_description') }}
+                        </div>
+                    </div>
+                {% if not ez_is_field_empty(content, 'description') %}
+                    <div class="row">
+                        <div class="col-md-12 header-desc">
+                            {{ ez_render_field(content, 'description') }}
+                        </div>
+                    </div>
+                {% endif %}
+                </div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                {% if pagerFolder is defined %}
+                    {% for child in pagerFolder %}
+                        {{ render_esi(controller('ez_content:viewAction', {
+                            'contentId': child.id,
+                            'viewType': 'default'
+                        })) }}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+        {% if pagerFolder is defined and pagerFolder.haveToPaginate() %}
+            <div class="pagination-centered">
+                {{ pagerfanta(pagerFolder, 'twitter_bootstrap3_translated', {
+                    'routeName': location
+                }) }}
+            </div>
+        {% endif %}
+    </section>
+{% endblock %}

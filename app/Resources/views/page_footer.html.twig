@@ -1,0 +1,28 @@
+<div class="footer">
+    <div class="container">
+        <div class="col col-md-3">
+            <div class="center-block">
+                <h3>{{ 'Tasteful'|trans }}<br /><span class="text-muted">{{ 'Planet'|trans }}</span></h3>
+                <p>
+                    &copy; 2015 eZ Systems<br />{{ 'All rights reserved'|trans }}
+                </p>
+            </div>
+        </div>
+
+        <div class="col col-md-3">
+            {{ render(controller('AppBundle:Menu:topMenu', {
+                'currentLocationId': currentLocation is defined ? currentLocation.id : null,
+                'template': '::page_footer_menu.html.twig'
+            })) }}
+        </div>
+
+        <div class="col col-md-3">
+            {% include '::page_footer_followus.html.twig' %}
+        </div>
+
+        <div class="col col-md-3">
+            <h4>{{ 'SUBSCRIBE TO OUR NEWS'|trans }}</h4>
+            <p>{{ 'Want to know more?'|trans }}<br />{{ 'Subscribe to our news and stay up to date.'|trans }}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+{% extends "::pagelayout.html.twig" %}
+
+{% block content %}
+    <section class="subscribe">
+        <div class="col-md-12 text-center">
+            {% if form.vars.submitted %}
+                <h1>{{ 'Form submitted!'|trans }}</h1>
+                <p>{% trans %}Congratulations %firstName%, %lastName% (%email%), you have just sent a form.{% endtrans %}</p>
+                <a href="/" class="btn btn-primary btn-large">{{ 'Home page'|trans }}</a>
+            {% endif %}
+        </div>
+    </section>
+{% endblock %}

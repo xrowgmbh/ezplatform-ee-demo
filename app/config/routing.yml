@@ -8,6 +8,24 @@ login_check:
 logout:
     path: /logout
 
+app.search:
+    path: /content/search
+    defaults:
+        _controller: app.controller.search:showSearchResultsAction
+    methods: [GET]
+
+app.subscribe:
+    path: /Subscribe
+    defaults:
+        _controller: app.controller.subscribe:confirm
+    methods: [POST]
+
+app.user_preferences:
+    path: /user/preferences
+    defaults:
+        _controller: app.controller.user_profile_controller:showPreferencesAction
+    methods: [GET, POST]
+
 kernel.internal:
     resource: '@EzPublishCoreBundle/Resources/config/routing/internal.yml'
 
@@ -50,6 +68,9 @@ ezplatform.ee.landing_page:
 
 fos.js_routing:
     resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
+
+_eztagsRoutes:
+    resource: "@NetgenTagsBundle/Resources/config/routing.yml"
 
 _novaezseoRoutes:
     resource: "@NovaeZSEOBundle/Controller/"

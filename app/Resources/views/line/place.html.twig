@@ -1,0 +1,16 @@
+<div class="col-sm-6 col-md-3" id="placeid-{{ content.versionInfo.contentInfo.id }}">
+    <div class="thumbnail place">
+        <a href="{{ path('ez_urlalias', {'locationId': content.contentInfo.mainLocationId}) }}">
+            {{ ez_render_field(content, 'image', {
+                'parameters': {
+                    'alias': 'place',
+                    'class': 'place-list-image img-responsive'
+                }
+            })
+            }}
+        </a>
+        <div class="caption">
+            <h3>{{ ez_content_name(content) }}</h3>
+        </div>
+    </div>
+</div>
