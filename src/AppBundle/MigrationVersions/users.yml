@@ -405,6 +405,10 @@
         -
             module: user
             function: login
+            limitations:
+                -
+                    identifier: SiteAccess
+                    values: [site, fr, de, no]
         -
             module: user
             function: register
@@ -443,6 +447,15 @@
         -
             module: rss
             function: feed
+        -
+            module: section
+            function: view
+        -
+            module: content
+            function: versionread
+        -
+            module: content
+            function: reverserelatedlist
     assign:
         -
             type: group
@@ -461,6 +474,10 @@
         -
             module: user
             function: login
+            limitations:
+                -
+                    identifier: SiteAccess
+                    values: [site, fr, de, no]
         -
             module: user
             function: register
@@ -520,12 +537,10 @@
                 -
                     identifier: Class
                     values: [reference:ref_content_type_id__file, reference:ref_content_type_id__image, reference:ref_content_type_id__video]
-## Already assigned
-#    assign:
-#        -
-#            type: group
-#            ids: [reference:ref_user_group__members, reference:ref_user_group__anonymous_users, reference:ref_user_group__editors]
-
+    assign:
+        -
+            type: group
+            ids: [reference:ref_user_group__editors]
 -
     type: role
     mode: update
