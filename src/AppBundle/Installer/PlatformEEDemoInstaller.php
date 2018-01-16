@@ -37,7 +37,7 @@ class PlatformEEDemoInstaller extends CleanInstaller
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/users.yml -n',
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/landing_page_contenttype.yml -n',
             'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/landing_page.yml -n',
-            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/cleanup-ee.yml -n',
+            'kaliop:migration:migrate --path=src/AppBundle/MigrationVersions/cleanup-ee.yml -n --no-transactions',
         ];
 
         foreach ($migrationCommands as $cmd) {
