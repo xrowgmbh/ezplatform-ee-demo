@@ -141,3 +141,5 @@ parameters:
 
 
     eztags.default.tag_view.pagelayout: '::pagelayout.html.twig'
+
+    userprofiling_block.public_dir: 'bundles/app'

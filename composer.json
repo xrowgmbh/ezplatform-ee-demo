@@ -74,7 +74,9 @@
         "netgen/tagsbundle": "^3.1@dev",
         "novactive/ezseobundle": "^2.2.0-alpha2",
         "components/bootstrap": "3.3.5",
-        "components/handlebars.js": "~3.0.0"
+        "components/handlebars.js": "~3.0.0",
+        "ezsystems/ezstudio-personalized-block": "^1.1@rc",
+        "ezsystems/recommendation-bundle": "^2.0@rc"
     },
     "require-dev": {
         "behat/behat": "~3.2",

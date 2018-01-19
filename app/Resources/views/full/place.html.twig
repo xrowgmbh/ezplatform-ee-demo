@@ -4,15 +4,12 @@
     {% set title = ez_content_name(content) ~ " - " ~ content.contentInfo.publishedDate|localizeddate('short', 'short', app.request.locale) %}
     {{ parent() }}
 
-    {#
     {% if ez_reco_enabled() and not location.isDraft %}
         {% include ':parts:recommendations_header.html.twig' %}
     {% endif %}
-    #}
 {% endblock %}
 
 {% block ez_recommendations %}
-    {#
     {% if ez_reco_enabled() and not location.isDraft %}
         {{ yc_show_recommendations(
             contentId = content.id,
@@ -23,7 +20,6 @@
             fields = ['name', 'intro', 'image', 'uri']
         ) }}
     {% endif %}
-    #}
 {% endblock %}
 
 {% block content %}

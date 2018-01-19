@@ -47,7 +47,7 @@ form.subscribe-form strong {
     -ms-appearance: none;
     -o-appearance: none;
     appearance: none;
-    background: url('/bundles/ezstudiodemo/images/arrow-select-down.svg') no-repeat 98% 8px #eee;
+    background: url('/bundles/app/images/arrow-select-down.svg') no-repeat 98% 8px #eee;
 }
 
 .subscribe-form {

@@ -72,7 +72,7 @@
 }
 
 .product-main-serving-icon {
-    background: url('/bundles/ezstudiodemo/images/product/serving.svg') no-repeat;
+    background: url('/bundles/app/images/product/serving.svg') no-repeat;
     width: 18px;
     height: 18px;
     display: inline-block;
@@ -109,27 +109,27 @@
 }
 
 .product-main-dietary-dairy-icon {
-    background: url('/bundles/ezstudiodemo/images/product/dairy.svg') no-repeat;
+    background: url('/bundles/app/images/product/dairy.svg') no-repeat;
 }
 
 .product-main-dietary-egg-icon {
-    background: url('/bundles/ezstudiodemo/images/product/egg.svg') no-repeat;
+    background: url('/bundles/app/images/product/egg.svg') no-repeat;
 }
 
 .product-main-dietary-nuts-icon {
-    background: url('/bundles/ezstudiodemo/images/product/nuts.svg') no-repeat;
+    background: url('/bundles/app/images/product/nuts.svg') no-repeat;
 }
 
 .product-main-dietary-gluten-icon {
-    background: url('/bundles/ezstudiodemo/images/product/gluten.svg') no-repeat;
+    background: url('/bundles/app/images/product/gluten.svg') no-repeat;
 }
 
 .product-main-dietary-seafood-icon {
-    background: url('/bundles/ezstudiodemo/images/product/seafood.svg') no-repeat;
+    background: url('/bundles/app/images/product/seafood.svg') no-repeat;
 }
 
 .product-main-spicy-pepper {
-    background: url('/bundles/ezstudiodemo/images/product/spicy.svg') no-repeat;
+    background: url('/bundles/app/images/product/spicy.svg') no-repeat;
     width: 18px;
     height: 18px;
     display: inline-block;

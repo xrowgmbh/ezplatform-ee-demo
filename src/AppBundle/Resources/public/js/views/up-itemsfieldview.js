@@ -134,7 +134,7 @@ YUI.add('up-itemsfieldview', function (Y) {
                 jQuery(selector).EzTags({
                     autocompleteUrl: '/tags/admin/field/autocomplete?',
                     maxTags: 1,
-                    subtreeLimit: 515,
+                    subtreeLimit: 513,
                     hideRootTag: 1,
                     sortable: false,
                     translations: {

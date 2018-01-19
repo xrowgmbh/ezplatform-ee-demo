@@ -55,11 +55,11 @@
 }
 
 .recommendations-indicator-icon-like {
-    background: url('/bundles/ezstudiodemo/images/recommendations/icon-like.svg') no-repeat;
+    background: url('/bundles/app/images/recommendations/icon-like.svg') no-repeat;
 }
 
 .recommendations-indicator-icon-loading {
-    background: url('/bundles/ezstudiodemo/images/recommendations/icon-loading.svg') no-repeat;
+    background: url('/bundles/app/images/recommendations/icon-loading.svg') no-repeat;
     -webkit-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
     -webkit-animation: loader_spin 1s linear infinite;
@@ -81,7 +81,7 @@
 }
 
 .recommendations-data-placeholder {
-    background: #fff url('/bundles/ezstudiodemo/images/recommendations/placeholder.png') left no-repeat;
+    background: #fff url('/bundles/app/images/recommendations/placeholder.png') left no-repeat;
     height: 100%;
     display: flex;
     align-items: center;

@@ -2,6 +2,10 @@
 
 {% block page_head %}
     {{ parent() }}
+
+    {% if ez_reco_enabled() %}
+        {% include ':parts:recommendations_header.html.twig' %}
+    {% endif %}
 {% endblock %}
 
 {% block content %}

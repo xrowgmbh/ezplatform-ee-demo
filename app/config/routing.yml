@@ -76,3 +76,10 @@ _novaezseoRoutes:
     resource: "@NovaeZSEOBundle/Controller/"
     type:     annotation
     prefix:   /
+
+recommendationBundleRestRoutes:
+    resource: "@EzSystemsRecommendationBundle/Resources/config/routing_rest.yml"
+    prefix:   %ezpublish_rest.path_prefix%
+
+_personalizedBlockRoutes:
+     resource: "@EzSystemsPersonalizedBlockBundle/Resources/config/routing.yml"

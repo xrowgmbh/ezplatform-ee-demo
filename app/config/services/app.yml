@@ -112,3 +112,18 @@ services:
         class: AppBundle\Seo\CustomFallback
         arguments:
             - '@=service("ezpublish.config.resolver").getParameter("seo", "app")[0]'
+
+    app.twig.recommendations_extension:
+        class: 'AppBundle\Twig\RecommendationsExtension'
+        arguments:
+            - '@ezpublish.config.resolver'
+        tags:
+            - { name: twig.extension }
+
+    app.block.userprofiling:
+        class: 'AppBundle\Block\UserProfilingBlock'
+        arguments:
+            - '@ezpublish.api.service.content'
+            - '@ezpublish.api.service.tags'
+        tags:
+            - { name: landing_page_field_type.block_type, alias: userprofiling }
