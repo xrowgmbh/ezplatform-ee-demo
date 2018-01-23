@@ -259,7 +259,7 @@ ezpublish:
                         match:
                             Identifier\ContentType: [product_list]
                     product:
-                        template: ":full:product.html.twig"
+                        template: ":full:product_demo_cloud.html.twig"
                         match:
                             Identifier\ContentType: [product]
                     default:
