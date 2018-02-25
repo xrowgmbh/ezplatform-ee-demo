@@ -1,0 +1,151 @@
+{% extends "::pagelayout.html.twig" %}
+
+{% form_theme form _self %}
+
+{%- block choice_widget_expanded -%}
+    <div {{ block('widget_container_attributes') }}>
+        {%- for child in form %}
+            <div class="element">
+                {{- form_widget(child) -}}
+                {{- form_label(child, null, {translation_domain: choice_translation_domain}) -}}
+            </div>
+        {% endfor -%}
+    </div>
+{%- endblock choice_widget_expanded -%}
+
+{% block content %}
+    <section class="product-list">
+        {{ form_start(form, { 'action': path(location) }) }}
+        <div class="col-md-12 section-search">
+            <span>Recipes</span>
+            <div class="input-group">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 475.1 475.1"><path d="M464.5 412.8l-97.9-97.9c23.6-34.1 35.4-72 35.4-113.9 0-27.2-5.3-53.2-15.9-78.1 -10.6-24.8-24.8-46.3-42.8-64.2 -18-18-39.4-32.3-64.2-42.8C254.2 5.3 228.2 0 201 0c-27.2 0-53.2 5.3-78.1 15.8C98.1 26.4 76.7 40.7 58.7 58.7c-18 18-32.3 39.4-42.8 64.2C5.3 147.8 0 173.8 0 201c0 27.2 5.3 53.2 15.8 78.1 10.6 24.8 24.8 46.2 42.8 64.2 18 18 39.4 32.3 64.2 42.8 24.8 10.6 50.9 15.8 78.1 15.8 41.9 0 79.9-11.8 113.9-35.4l97.9 97.6c6.9 7.2 15.4 10.8 25.7 10.8 9.9 0 18.5-3.6 25.7-10.8 7.2-7.2 10.8-15.8 10.8-25.7C475.1 428.5 471.6 419.9 464.5 412.8zM291.4 291.4c-25 25-55.1 37.5-90.4 37.5 -35.2 0-65.3-12.5-90.4-37.5 -25-25-37.5-55.1-37.5-90.4 0-35.2 12.5-65.3 37.5-90.4 25-25 55.2-37.5 90.4-37.5 35.2 0 65.3 12.5 90.4 37.5 25 25 37.5 55.2 37.5 90.4C328.9 236.2 316.4 266.3 291.4 291.4z"/></svg>
+                </span>
+                {{ form_widget(form.searchText, {'attr': {'class': 'search'}}) }}
+                {{ form_widget(form.save, {'attr': {'class': 'btn btn-search'}}) }}
+            </div>
+            <div class="filter-button">
+                <button class="btn btn-filters">{{ 'Filters'|trans }} <span class="badge"></span></button>
+                <div class="arrow"></div>
+            </div>
+        </div>
+
+        {% set imageAlias = false %}
+
+        {% if not ez_is_field_empty(content, 'banner') %}
+            {% set imageAlias = ez_image_alias(content.getField('banner'), content.versionInfo, 'header').uri %}
+        {% endif %}
+
+        <div class="col-md-12 section-header"{% if imageAlias|length %} style="background-image: url('{{ imageAlias }}');"{% endif %}>
+            <div class="header-title">{{ ez_render_field(content, 'description') }}</div>
+            <div class="filters">
+                <div class="filter-container">
+                    <div class="column">
+                        <b>{{ 'Allergies'|trans }}:</b>
+                        {{ form_row(form.dairy) }}
+                        {{ form_row(form.egg) }}
+                        {{ form_row(form.nuts) }}
+                        {{ form_row(form.seafood) }}
+                        {{ form_row(form.gluten) }}
+                    </div>
+                    <div class="column">
+                        <b>{{ 'Spicyness'|trans }}: </b>
+                        {{ form_widget(form.spicy) }}
+                    </div>
+                    <div class="column">
+                        <b>{{ 'Servings'|trans }}: </b>
+                        {{ form_widget(form.serving) }}
+                    </div>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-apply" type="submit">{{ 'Apply filters'|trans }}</button>
+                    <span class="btn btn-clear">{{ 'Clear all'|trans }}</span>
+                </div>
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+
+        <div class="col-md-12 section-spacer">
+            <span>{{ 'What is on our menu'|trans }}</span>
+        </div>
+
+        <div class="col-md-12 product-items">
+            {% if content_items|length > 0 %}
+                {% for content in content_items %}
+                    {{ render_esi(controller('ez_content:viewAction', {
+                        'locationId': content.contentInfo.mainLocationId,
+                        'viewType': view_type
+                    })) }}
+                {% endfor %}
+
+                {% if content_items.currentPageResults|length < content_items.maxPerPage %}
+                    {% set missingItems = content_items.maxPerPage - content_items.currentPageResults|length %}
+                    {% for item in 1..missingItems %}
+                        <div class="product-list-item"></div>
+                    {% endfor %}
+                {% endif %}
+            {% else %}
+                <div class="warning">
+                    <h2>{{ 'No results were found.'|trans }}</h2>
+                    <div class="well">
+                        <p>Search tips</p>
+                        <ul>
+                            <li>{{ 'Check spelling of keywords.'|trans }}</li>
+                            <li>{{ 'Try changing some keywords (eg, "car" instead of "cars").'|trans }}</li>
+                            <li>{{ 'Try searching with less specific keywords.'|trans }}</li>
+                            <li>{{ 'Reduce number of keywords to get more results.'|trans }}</li>
+                            <li>{{ 'Change the filters.'|trans }}</li>
+                        </ul>
+                    </div>
+                </div>
+
+            {% endif %}
+        </div>
+
+        <div class="container">
+            <div class="col-lg-12 space-bottom text-center">
+                {% if content_items.haveToPaginate() %}
+                    {{ pagerfanta(content_items, 'twitter_bootstrap3_translated', {
+                        routeName: location,
+                        routeParams: ezpublish.requestStack.masterRequest.query.all
+                    }) }}
+                {% endif %}
+            </div>
+        </div>
+    </section>
+
+    <script>
+        $(function () {
+            var checkedCheckboxes,
+                countCheckedCheckboxes = function () {
+                    checkedCheckboxes = $('.filters input:checkbox:checked').length;
+                    $('.section-search .btn-filters .badge').html(checkedCheckboxes > 0 ? checkedCheckboxes : '');
+                    return checkedCheckboxes;
+                };
+
+            $('.filter-container input[type="checkbox"]').click(function () {
+                countCheckedCheckboxes();
+            });
+
+            $('.btn-filters').click(function () {
+                $('.filters, .filter-button > .arrow').toggle();
+                $('.section-header').toggleClass('section-filter');
+                return false;
+            });
+
+            $('.filters .btn-clear').click(function () {
+                $('.filter-container input[type="checkbox"]').attr('checked', false);
+                countCheckedCheckboxes();
+                return false;
+            });
+
+            if (countCheckedCheckboxes()) {
+                $('.btn-filters').trigger('click');
+            }
+        })
+    </script>
+
+    {% include ':parts:product_modal_dialog.html.twig' %}
+{% endblock %}

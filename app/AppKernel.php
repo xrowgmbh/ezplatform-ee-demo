@@ -5,16 +5,10 @@ use Symfony\Component\Config\Loader\LoaderInterface;
 
 class AppKernel extends Kernel
 {
-    /**
-     * Returns an array of bundles to registers.
-     *
-     * @return array An array of bundle instances.
-     *
-     * @api
-     */
     public function registerBundles()
     {
-        $bundles = array(
+        $bundles = [
+            // Symfony
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -23,76 +17,98 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Tedivm\StashBundle\TedivmStashBundle(),
+            // Dependencies
             new Hautelook\TemplatedUriBundle\HautelookTemplatedUriBundle(),
             new Liip\ImagineBundle\LiipImagineBundle(),
             new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
+            new Nelmio\CorsBundle\NelmioCorsBundle(),
+            new Oneup\FlysystemBundle\OneupFlysystemBundle(),
+            new JMS\TranslationBundle\JMSTranslationBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new Novactive\Bundle\eZSEOBundle\NovaeZSEOBundle(),
+            new Kaliop\eZMigrationBundle\EzMigrationBundle(),
+            new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
+            // eZ Systems
             new EzSystems\PlatformHttpCacheBundle\EzSystemsPlatformHttpCacheBundle(),
             new EzSystems\PlatformFastlyCacheBundle\EzSystemsPlatformFastlyCacheBundle(),
             new eZ\Bundle\EzPublishCoreBundle\EzPublishCoreBundle(),
             new eZ\Bundle\EzPublishLegacySearchEngineBundle\EzPublishLegacySearchEngineBundle(),
             new eZ\Bundle\EzPublishIOBundle\EzPublishIOBundle(),
-            new EzSystems\MultiFileUploadBundle\EzSystemsMultiFileUploadBundle(),
             new eZ\Bundle\EzPublishRestBundle\EzPublishRestBundle(),
-            new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
-            new EzSystems\LandingPageFieldTypeBundle\EzSystemsLandingPageFieldTypeBundle(),
-            new EzSystems\FormBuilderBundle\EzSystemsFormBuilderBundle(),
-            new EzSystems\PlatformEEAssetsBundle\EzSystemsPlatformEEAssetsBundle(),
-            new EzSystems\StudioUIBundle\EzSystemsStudioUIBundle(),
-            new EzSystems\StudioDemoBundle\EzSystemsStudioDemoBundle(),
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new EzSystems\ShareButtonsBundle\EzSystemsShareButtonsBundle(),
-            new EzSystems\RecommendationBundle\EzSystemsRecommendationBundle(),
-            new EzSystems\FlexWorkflowBundle\EzSystemsFlexWorkflowBundle(),
-            new EzSystems\PlatformUIAssetsBundle\EzSystemsPlatformUIAssetsBundle(),
-            new EzSystems\PlatformUIBundle\EzSystemsPlatformUIBundle(),
             new EzSystems\EzSupportToolsBundle\EzSystemsEzSupportToolsBundle(),
-            new EzSystems\NotificationBundle\EzSystemsNotificationBundle(),
-            new Nelmio\CorsBundle\NelmioCorsBundle(),
-            new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
-            new Oneup\FlysystemBundle\OneupFlysystemBundle(),
             new EzSystems\PlatformInstallerBundle\EzSystemsPlatformInstallerBundle(),
             new EzSystems\RepositoryFormsBundle\EzSystemsRepositoryFormsBundle(),
             new EzSystems\EzPlatformSolrSearchEngineBundle\EzSystemsEzPlatformSolrSearchEngineBundle(),
-            new EzSystems\EzContentOnTheFlyBundle\EzSystemsEzContentOnTheFlyBundle(),
             new EzSystems\EzPlatformDesignEngineBundle\EzPlatformDesignEngineBundle(),
-            new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
-            new JMS\TranslationBundle\JMSTranslationBundle(),
-            new EzSystems\CronBundle\EzSystemsCronBundle(),
-            new EzSystems\DateBasedPublisherBundle\EzSystemsDateBasedPublisherBundle(),
-            new EzSystems\PersonalizedBlockBundle\EzSystemsPersonalizedBlockBundle(),
-            new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
+            new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
+            // Dependencies
             new Netgen\TagsBundle\NetgenTagsBundle(),
-            new Novactive\Bundle\eZSEOBundle\NovaeZSEOBundle(),
+            // Application
+            new EzSystems\EzPlatformAdminUiBundle\EzPlatformAdminUiBundle(),
+            new EzSystems\EzPlatformAdminUiModulesBundle\EzPlatformAdminUiModulesBundle(),
+            new EzSystems\EzPlatformAdminUiAssetsBundle\EzPlatformAdminUiAssetsBundle(),
+            // eZ Studio
+            new EzSystems\FormBuilderBundle\EzSystemsFormBuilderBundle(),
+            new EzSystems\StudioUIBundle\EzSystemsStudioUIBundle(),
+            new EzSystems\DateBasedPublisherBundle\EzSystemsDateBasedPublisherBundle(),
+            new EzSystems\FlexWorkflowBundle\EzSystemsFlexWorkflowBundle(),
+            new EzSystems\NotificationBundle\EzSystemsNotificationBundle(),
+            new EzSystems\PlatformUIBundle\EzSystemsPlatformUIBundle(),
+            new EzSystems\PlatformUIAssetsBundle\EzSystemsPlatformUIAssetsBundle(),
+            new EzSystems\LandingPageFieldTypeBundle\EzSystemsLandingPageFieldTypeBundle(),
+            new EzSystems\PlatformEEAssetsBundle\EzSystemsPlatformEEAssetsBundle(),
+            new EzSystems\CronBundle\EzSystemsCronBundle(),
+            new EzSystems\StudioInstallerBundle\EzSystemsStudioInstallerBundle(),
+            new EzSystems\RecommendationBundle\EzSystemsRecommendationBundle(),
+            new EzSystems\PersonalizedBlockBundle\EzSystemsPersonalizedBlockBundle(),
+            // AppBundle
             new AppBundle\AppBundle(),
-        );
+        ];
 
         switch ($this->getEnvironment()) {
             case 'test':
             case 'behat':
                 $bundles[] = new EzSystems\BehatBundle\EzSystemsBehatBundle();
                 $bundles[] = new EzSystems\PlatformBehatBundle\EzPlatformBehatBundle();
-                // No break, test also needs dev bundles
+            // No break, test also needs dev bundles
             case 'dev':
                 $bundles[] = new eZ\Bundle\EzPublishDebugBundle\EzPublishDebugBundle();
                 $bundles[] = new Symfony\Bundle\DebugBundle\DebugBundle();
                 $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
+                $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
                 $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
-                $bundles[] = new Egulias\ListenersDebugCommandBundle\EguliasListenersDebugCommandBundle();
         }
 
         return $bundles;
     }
 
-    /**
-     * Loads the container configuration.
-     *
-     * @param LoaderInterface $loader A LoaderInterface instance
-     * @throws \RuntimeException when config file is not readable
-     *
-     * @api
-     */
+    public function getRootDir()
+    {
+        return __DIR__;
+    }
+
+    public function getCacheDir()
+    {
+        if (!empty($_SERVER['SYMFONY_TMP_DIR'])) {
+            return rtrim($_SERVER['SYMFONY_TMP_DIR'], '/') . '/var/cache/' . $this->getEnvironment();
+        }
+
+        return dirname(__DIR__) . '/var/cache/' . $this->getEnvironment();
+    }
+
+    public function getLogDir()
+    {
+        if (!empty($_SERVER['SYMFONY_TMP_DIR'])) {
+            return rtrim($_SERVER['SYMFONY_TMP_DIR'], '/') . '/var/logs';
+        }
+
+        return dirname(__DIR__) . '/var/logs';
+    }
+
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
         $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');

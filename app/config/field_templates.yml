@@ -1,0 +1,7 @@
+ezpublish:
+    system:
+        admin_group:
+            field_templates:
+                -
+                    template: ":fields:landingpage_field.html.twig"
+                    priority: 10

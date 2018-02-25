@@ -1,0 +1,7 @@
+services:
+    app.query_type.children_list:
+        class: AppBundle\QueryType\ChildrenListQueryType
+        calls:
+            - [setLanguages, ['$languages$']]
+        tags:
+            - { name: ezpublish.query_type }

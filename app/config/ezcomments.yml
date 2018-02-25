@@ -1,0 +1,14 @@
+ez_comments:
+    system:
+        default:
+            default_provider: no_comments
+            disqus:
+                shortname: ezPlatformEEDemo
+            content_comments:
+                default:
+                    enabled: true
+                    provider: disqus
+                    match:
+                        Identifier\ContentType:
+                            - article
+                            - blog_post

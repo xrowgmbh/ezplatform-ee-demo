@@ -1,0 +1,23 @@
+{% extends "::pagelayout.html.twig" %}
+
+{% block content %}
+    <section class="about">
+        {% if not ez_is_field_empty(content, 'image') %}
+            {% set imageAlias = ez_image_alias(content.getField('image'), content.versionInfo, 'header') %}
+            <div class="col-md-12 section-header" style="background-image: url('{{ imageAlias.uri }}');">
+        {% else %}
+            <div class="col-md-12 section-header">
+        {% endif %}
+                <div class="header-title">{{ ez_render_field(content, 'title') }}</div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-5 col-md-offset-1 about-column">
+                {{ ez_render_field(content, 'left_column') }}
+            </div>
+            <div class="col-md-5 about-column">
+                {{ ez_render_field(content, 'right_column') }}
+            </div>
+        </div>
+    </section>
+{% endblock %}

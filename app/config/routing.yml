@@ -8,68 +8,86 @@ login_check:
 logout:
     path: /logout
 
-_ezpublishRoutes:
+app.search:
+    path: /content/search
+    defaults:
+        _controller: app.controller.search:showSearchResultsAction
+    methods: [GET]
+
+app.subscribe:
+    path: /Subscribe
+    defaults:
+        _controller: app.controller.subscribe:confirm
+    methods: [POST]
+
+app.user_preferences:
+    path: /user/preferences
+    defaults:
+        _controller: app.controller.user_profile_controller:showPreferencesAction
+    methods: [GET, POST]
+
+netgen_tags_admin_autocomplete:
+    path: /tags/admin/field/autocomplete
+    defaults:
+        _controller: eztags.admin.controller.field:autoCompleteAction
+        _method: GET
+    options:
+        expose: true
+
+kernel.internal:
     resource: '@EzPublishCoreBundle/Resources/config/routing/internal.yml'
 
-_ezpublishRestRoutes:
+kernel.rest:
     resource: '@EzPublishRestBundle/Resources/config/routing.yml'
-    prefix: '%ezpublish_rest.path_prefix%'
+    prefix: /api/ezp/v2
 
-_ezpublishRestOptionsRoutes:
-    resource: '@EzPublishRestBundle/Resources/config/routing.yml'
-    prefix: '%ezpublish_rest.path_prefix%'
-    type: rest_options
-
-_liip_imagine:
-    resource: '@LiipImagineBundle/Resources/config/routing.xml'
-
-_ezpublishPlatformUIRoutes:
-    resource: '@eZPlatformUIBundle/Resources/config/routing.yml'
+ezplatform.admin_ui:
+    resource: '@EzPlatformAdminUiBundle/Resources/config/routing.yml'
+    defaults:
+        siteaccess_group_whitelist: '%admin_group_name%'
 
 _ezplatformRepositoryFormsRoutes:
     resource: '@EzSystemsRepositoryFormsBundle/Resources/config/routing.yml'
 
-_landingPageBundleRoutes:
-    resource: "@EzSystemsLandingPageFieldTypeBundle/Resources/config/routing.yml"
+ezplatform.ee.dependencies.bazinga:
+    resource: '@BazingaJsTranslationBundle/Resources/config/routing/routing.yml'
 
-_ezpublishStudioUIRoutes:
-    resource: "@eZStudioUIBundle/Resources/config/routing.yml"
+ezplatform.ee.dependencies.platform_ui:
+    resource: '@eZPlatformUIBundle/Resources/config/routing.yml'
 
-_ezpublishStudioDemoRoutes:
-    resource: "@eZStudioDemoBundle/Resources/config/routing.yml"
+ezplatform.ee.admin_ui:
+    resource: '@eZStudioUIBundle/Resources/config/routing.yml'
 
-_ezpublishFlexWorkflowRoutes:
-    resource: "@FlexWorkflowBundle/Resources/config/routing.yml"
+ezplatform.ee.form_builder:
+    resource: '@EzSystemsFormBuilderBundle/Resources/config/routing.yml'
 
-_ezpublishNotificationRoutes:
-    resource: "@NotificationBundle/Resources/config/routing.yml"
+ezplatform.ee.date_based_publisher:
+    resource: '@EzSystemsDateBasedPublisherBundle/Resources/config/routing.yml'
+    prefix: '%ez_systems_date_based_publisher_rest_prefix%'
 
-_contentOnTheFly:
-    resource: "@ContentOnTheFlyBundle/Resources/config/routing.yml"
-    prefix: "%ezpublish_rest.path_prefix%"
+ezplatform.ee.flex_workflow:
+    resource: '@FlexWorkflowBundle/Resources/config/routing.yml'
 
-_recommendationBundleRestRoutes:
-    resource: "@EzSystemsRecommendationBundle/Resources/config/routing_rest.yml"
-    prefix: "%ezpublish_rest.path_prefix%"
+ezplatform.ee.notifications:
+    resource: '@NotificationBundle/Resources/config/routing.yml'
 
-_ezStudioFormBuilder:
-    resource: "@EzSystemsFormBuilderBundle/Resources/config/routing.yml"
+ezplatform.ee.landing_page:
+    resource: '@EzSystemsLandingPageFieldTypeBundle/Resources/config/routing.yml'
 
-_ezpublishDateBasedPublisher:
-    resource: "@EzSystemsDateBasedPublisherBundle/Resources/config/routing.yml"
-    prefix: "%ez_systems_date_based_publisher_rest_prefix%"
-
-_personalizedBlockRoutes:
-    resource: "@EzSystemsPersonalizedBlockBundle/Resources/config/routing.yml"
+fos.js_routing:
+    resource: '@FOSJsRoutingBundle/Resources/config/routing/routing.xml'
 
 _eztagsRoutes:
     resource: "@NetgenTagsBundle/Resources/config/routing.yml"
-
-_multiFileUpload:
-    resource: '@EzSystemsMultiFileUploadBundle/Resources/config/routing.yml'
-    prefix: '%ezpublish_rest.path_prefix%'
 
 _novaezseoRoutes:
     resource: "@NovaeZSEOBundle/Controller/"
     type:     annotation
     prefix:   /
+
+recommendationBundleRestRoutes:
+    resource: "@EzSystemsRecommendationBundle/Resources/config/routing_rest.yml"
+    prefix:   %ezpublish_rest.path_prefix%
+
+_personalizedBlockRoutes:
+     resource: "@EzSystemsPersonalizedBlockBundle/Resources/config/routing.yml"

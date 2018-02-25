@@ -1,0 +1,51 @@
+services:
+    app.controller.language_switcher:
+        class: AppBundle\Controller\LanguageSwitcherController
+        arguments:
+            - '@ezpublish.controller.content.view'
+            - '@ezpublish.locale.converter'
+            - '@ezpublish.translation_helper'
+
+    app.controller.search:
+        class: AppBundle\Controller\SearchController
+        arguments:
+            - '@ezpublish.api.service.search'
+            - '@app.form.search.simple'
+            - '@ezpublish.config.resolver'
+            - '@templating'
+            - '%app.search.list.content_types%'
+            - '%app.search.list.limit%'
+
+    app.controller.subscribe:
+        class: AppBundle\Controller\SubscribeController
+        arguments:
+            - '@app.form.type.signup'
+            - '@app.form.signup.form'
+            - '@templating'
+
+    app.controller.recommendations:
+        class: AppBundle\Controller\RecommendationsController
+        arguments:
+            - '@ezpublish.api.service.location'
+            - '@ezpublish.api.service.search'
+            - '@ezpublish.api.service.content'
+            - '@router'
+            - '@templating'
+
+    app.controller.product_controller:
+        class: AppBundle\Controller\ProductController
+        arguments:
+            - '@ezpublish.query_type_content_view_mapper'
+            - '@ezpublish.api.service.search'
+            - '@form.factory'
+
+
+    app.controller.user_profile_controller:
+        class: AppBundle\Controller\UserProfileController
+        arguments:
+            - '@templating'
+            - '@form.factory'
+            - '@security.token_storage'
+            - '@router'
+            - '@eztags.api.service.tags'
+            - '@app.user.user_interests'

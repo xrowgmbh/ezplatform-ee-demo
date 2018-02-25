@@ -1,0 +1,107 @@
+{% extends noLayout ? viewbaseLayout : "::pagelayout.html.twig" %}
+
+{% block page_head %}
+    {% set title = ez_content_name(content) ~ " - " ~ content.contentInfo.publishedDate|localizeddate('short', 'short', app.request.locale) %}
+    {{ parent() }}
+
+    {% if ez_reco_enabled() and not location.isDraft %}
+        {% include ':parts:recommendations_header.html.twig' %}
+    {% endif %}
+{% endblock %}
+
+{% block ez_recommendations %}
+    {% if ez_reco_enabled() and not location.isDraft %}
+        {{ yc_show_recommendations(
+            contentId = content.id,
+            scenario = 'visited',
+            limit = '3',
+            contentType = 'place',
+            template = 'recommendations',
+            fields = ['name', 'intro', 'image', 'uri']
+        ) }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <section class="place">
+        <div class="place-nav col-md-12">
+            {% if prev %}<a href="{{ path(prev) }}" class="pull-left">&laquo; {{ 'Prev'|trans }}</a>{% endif %}
+            {% if next %}<a href="{{ path(next) }}" class="pull-right">{{ 'Next'|trans }} &raquo;</a>{% endif %}
+        </div>
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 article">
+                <div class="content-type">
+                    {{ 'Places'|trans }}
+                </div>
+
+                <h1 class="content-title">{{ ez_render_field(content, 'intro') }}</h1>
+
+                <div class="row">
+                    <div class="content-meta">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <span class="content-meta-date">
+                                    {% include ':parts:date.html.twig' with {'date': ez_field_value(content, 'publication_date')} %}
+                                </span>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <span class="content-meta-soocial">
+                                    {#
+                                    {{ show_share_buttons(
+                                        options = {
+                                            facebook_like: {
+                                                layout: 'button_count',
+                                                show_faces: false
+                                            },
+                                            template: 'default'
+                                        },
+                                        providers = ['facebook_like']
+                                    ) }}
+                                    #}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <span class="content-meta-author">
+                                    {{ ez_render_field(content, 'author', {attr: {class: 'authors'}}) }}
+                                </span>
+                            </div>
+                            <div class="col-md-6 text-center">
+                                <span class="content-meta-authors_position">
+                                    {{ ez_render_field(content, 'authors_position', {parameters: {class: 'authors'}}) }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-image">
+            {{ ez_render_field(content, 'image', {
+                'parameters': {
+                    'alias': 'place_large',
+                    'class': 'img-responsive'
+                }
+            }) }}
+        </div>
+
+        <div class="content-image-caption">
+            {{ ez_render_field(content, 'caption') }}
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 article">
+                <div class="content-body">
+                    {{ ez_render_field(content, 'description') }}
+                </div>
+
+                <div class="content-tags clearfix">
+                    {{ ez_render_field(content, 'tags') }}
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

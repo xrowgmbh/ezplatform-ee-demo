@@ -1,0 +1,52 @@
+{% extends "::pagelayout.html.twig" %}
+
+{% block page_head %}
+    {% set title = 'Search page'|trans %}
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    <div class="col-sm-12">
+        {{ form_start( form, {'class': 'form-search'} ) }}
+        <div class="input-group">
+            {{ form_widget( form.searchText, { 'attr': {'class': 'form-control search-query','autofocus':'autofocus'}} ) }}
+            <span class="input-group-btn">
+                {{ form_widget( form.save, { 'label': "Search"|trans, 'attr': { 'class': 'btn btn-default' } } ) }}
+            </span>
+        </div>
+        {{ form_end( form ) }}
+    </div>
+
+    <div class="col-sm-12">
+        {% if searchCount > 0 %}
+            <div class="feedback">
+                <h3>{% trans %}Search for "%searchText%" returned %searchCount% matches{% endtrans %}</h3>
+            </div>
+
+            <div class="search-results">
+                {% for searchResult in pagerSearch %}
+                    {{ render_esi( controller( 'ez_content:viewAction', {'locationId': searchResult.contentInfo.mainLocationId, 'viewType': 'default'} ) ) }}
+                {% endfor %}
+            </div>
+
+            {% if pagerSearch.haveToPaginate() %}
+                <div class="text-center">
+                    {{ pagerfanta( pagerSearch, 'twitter_bootstrap3_translated' ) }}
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="warning">
+                <h2>{% trans %}No results were found when searching for "%searchText%".{% endtrans %}</h2>
+            </div>
+            <div class="well">
+                <p>{{ 'Search tips'|trans }}</p>
+                <ul>
+                    <li>{{ 'Check spelling of keywords.'|trans }}</li>
+                    <li>{{ 'Try changing some keywords (eg, "car" instead of "cars").'|trans }}</li>
+                    <li>{{ 'Try searching with less specific keywords.'|trans }}</li>
+                    <li>{{ 'Reduce number of keywords to get more results.'|trans }}</li>
+                </ul>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

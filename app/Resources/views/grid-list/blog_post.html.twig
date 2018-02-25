@@ -1,0 +1,20 @@
+<li class="media schedule-layout--hero__slot schedule-layout__slot">
+    <a href="{{ path(location) }}">
+        <article class="grid-list">
+            <div class="text-right grid-list-date">
+                <div class="text-right grid-list-date">
+                    {% include ':parts:date.html.twig' with {'date': ez_field_value(content, 'publication_date')} %}
+                </div>
+            </div>
+            <div class="media-left media-top">
+                {% if not ez_is_field_empty(content, 'image') %}
+                    <div class="thumb" style="background-image: url('{{ ez_field_value(content, 'image').uri }}');"></div>
+                {% endif %}
+            </div>
+            <div class="media-body">
+                <h5 class="media-heading">{{ ez_content_name(content) }}</h5>
+                {{ ez_render_field(content, 'intro') }}
+            </div>
+        </article>
+    </a>
+</li>

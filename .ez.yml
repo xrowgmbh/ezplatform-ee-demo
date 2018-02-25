@@ -5,4 +5,4 @@ integrate:
   command: "bin/behat"
   matrix:
   # Run 'common' tagged behat scenarios on ezplatform-ee-demo install
-    - {arguments: "-v --profile demoMeta --tags common --strict", install: "demo"}
+    - {arguments: "-v --profile demoMeta --tags common --strict", install: "platform-ee-demo"}

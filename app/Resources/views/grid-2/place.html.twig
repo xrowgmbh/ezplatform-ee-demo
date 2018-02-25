@@ -1,0 +1,18 @@
+<article class="grid-2 places-list-item-container">
+    <a href="{{ path(location) }}">
+        <div class="row">
+            <div class="col-sm-12">
+                {% set imageAlias = ez_image_alias(content.getField('image'), content.versionInfo, 'place_list') %}
+                <div class="thumb" style="background-image: url('{{ imageAlias.uri }}');">
+                    <i>{{ 'Places'|trans }}</i>
+                </div>
+                <div class="places-list-item-info">
+                    <h5>{{ ez_content_name(content) }}</h5>
+                    <div class="places-list-item-description">
+                        {{ ez_render_field(content, 'intro') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</article>

@@ -1,0 +1,38 @@
+.place {
+    background: #fff;
+    min-height: 300px;
+    border-top: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.place .content-image img {
+    width: 100%;
+}
+
+.place h3 {
+    color: #454545;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 10px;
+}
+
+.place-nav {
+    border-bottom: 1px solid #eee;
+}
+
+.place-nav a {
+    color: #ccc;
+    display: block;
+    font-size: x-small;
+    font-weight: bold;
+    height: 40px;
+    line-height: 33px;
+    padding: 4px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100px;
+}
+
+.place-nav a:hover {
+    color: #444;
+}

@@ -1,5 +1,5 @@
 <script id="recommendations-template-default-{{ templateId }}" type="text/x-handlebars-template">
-    {{ render_esi(controller('ezstudiodemo.controller.recommendations:showRandom', {
+    {{ render_esi(controller('app.controller.recommendations:showRandom', {
         'template': 'EzSystemsRecommendationBundle::missing_recommendations.html.twig',
         'selectedContentTypes': [
             'article',

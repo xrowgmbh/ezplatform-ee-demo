@@ -1,0 +1,10 @@
+<article class="cover" style="background-image: url({{ ez_field_value(content, 'image').uri }})">
+    <div class="text-vertical-center">
+        <div class="row">
+            <a href="{{ path(location) }}">
+                <h1>{{ ez_content_name(content) }}</h1>
+                <h3>{{ ez_render_field(content, 'intro') }}</h3>
+            </a>
+        </div>
+    </div>
+</article>

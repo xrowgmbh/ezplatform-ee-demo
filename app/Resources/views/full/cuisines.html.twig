@@ -1,0 +1,87 @@
+{% extends "::pagelayout.html.twig" %}
+
+{% block content %}
+    <section class="cuisines">
+        {% if not ez_is_field_empty(content, 'image') %}
+            {% set imageAlias = ez_image_alias(content.getField('image'), content.versionInfo, 'header') %}
+            <div class="col-md-12 section-header" style="background-image: url('{{ imageAlias.uri }}');">
+        {% else %}
+            <div class="col-md-12 section-header">
+        {% endif %}
+                <div class="header-title">{{ ez_content_name(content) }}</div>
+            </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div id="gallery-{{ ez_content_name(content) }}" class="carousel gallery slide col-md-12 block-gallery" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            {% for i in 0..pagerFolder|length-1 %}
+                                <li data-target="#gallery-{{ ez_content_name(content) }}" data-slide-to="{{ i }}" {{ loop.index == 1 ? 'class="active"' : '' }}></li>
+                            {% endfor %}
+                        </ol>
+
+                        <div class="carousel-inner" role="listbox">
+                            {% for article in pagerFolder %}
+                                <div class="item{{ loop.index == 1 ? ' active' : '' }}">
+                                    {{ ez_render_field(article, 'image', {
+                                        'parameters': {
+                                            'width': '100%',
+                                            'alias': 'cuisines-gallery'
+                                        }
+                                    }) }}
+
+                                    <div class="carousel-caption">
+                                        <h1>{{ ez_content_name(article) }}</h1>
+                                        <p>{{ ez_render_field(article, 'intro') }}</p>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+
+                        <a class="left carousel-control" href="#gallery-{{ ez_content_name(content) }}" role="button" data-slide="prev">
+                            <span class="gallery-control gallery-left" aria-hidden="true"></span>
+                            <span class="sr-only">{{ 'Previous'|trans }}</span>
+                        </a>
+
+                        <a class="right carousel-control" href="#gallery-{{ ez_content_name(content) }}" role="button" data-slide="next">
+                            <span class="gallery-control gallery-right" aria-hidden="true"></span>
+                            <span class="sr-only">{{ 'Next'|trans }}</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-xs-6 col-md-3 col-cuisine">
+                        <div class="thumbnail cuisine cuisine-main">
+                            <div class="caption">
+                                <h3>{{ ez_render_field(content, 'short_name') }}</h3>
+                                {{ ez_render_field(content, 'short_description') }}
+                            </div>
+                        </div>
+                    </div>
+
+                    {% for article in pagerFolder %}
+                        {{ render_esi(controller('ez_content:viewAction', {
+                            'locationId': article.contentInfo.mainLocationId,
+                            'viewType': 'line'
+                        })) }}
+                    {% endfor %}
+
+                    {% if pagerFolder.haveToPaginate() %}
+                        <div class="pagination-centered">
+                            {{ pagerfanta(pagerFolder, 'twitter_bootstrap_translated', {
+                                'routeName': location
+                            }) }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+    </section>
+{% endblock %}

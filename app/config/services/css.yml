@@ -1,0 +1,6 @@
+ez_platformui:
+    system:
+        default:
+            css:
+                files:
+                    - '@AppBundle/Resources/public/css/blocks/userprofiling.css'

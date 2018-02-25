@@ -1,0 +1,18 @@
+{% extends pagelayout %}
+
+{% block page_head %}
+    {% set title = 'Register user'|trans %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block content %}
+    {% import ":form:registration_form.html.twig" as registrationForm %}
+
+    <section class="user-form col-md-4 col-md-offset-4">
+        <h2>{{ 'Member Registration'|trans }}</h2>
+        <div class="legend">* {{ 'All fields are required'|trans }}</div>
+
+        {{ registrationForm.display_form(form) }}
+    </section>
+{% endblock %}

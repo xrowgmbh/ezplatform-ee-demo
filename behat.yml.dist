@@ -1,4 +1,3 @@
-# This file contains the default configuration for behat testing using EzSystems/BehatBundle
 default:
     calls:
         error_reporting: -1 # Report all PHP errors
@@ -19,30 +18,25 @@ default:
 
         Behat\Symfony2Extension:
             kernel:
-                bootstrap: app/autoload.php
+                bootstrap: vendor/autoload.php
                 path: app/AppKernel.php
                 class: AppKernel
                 env: behat
                 debug: false
 
-        jarnaiz\JUnitFormatter\JUnitFormatterExtension:
-            filename: report.xml
-            outputDir: %paths.base%/app/logs/junit
+        EzSystems\PlatformBehatBundle\ServiceContainer\EzBehatExtension: ~
 
-    # default profile: no suites
     suites: ~
 
 imports:
     - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/behat_suites.yml
     - vendor/ezsystems/ezpublish-kernel/eZ/Bundle/EzPublishRestBundle/behat_suites.yml
-    - vendor/ezsystems/behatbundle/EzSystems/BehatBundle/behat_suites.yml
-    - vendor/ezsystems/platform-ui-bundle/behat_suites.yml
     - vendor/ezsystems/repository-forms/behat_suites.yml
+    - vendor/ezsystems/ezplatform-admin-ui/behat_suites.yml
+    - vendor/ezsystems/behatbundle/EzSystems/BehatBundle/behat_suites.yml
     - vendor/ezsystems/studio-ui-bundle/behat_suites.yml
     - vendor/ezsystems/flex-workflow/behat_suites.yml
     - vendor/ezsystems/date-based-publisher/behat_suites.yml
     - vendor/ezsystems/ezstudio-form-builder/behat_suites.yml
     - vendor/ezsystems/landing-page-fieldtype-bundle/behat_suites.yml
-    - vendor/ezsystems/ezstudio-demo-bundle/behat_suites.yml
-    - vendor/ezsystems/content-on-the-fly-prototype/behat_suites.yml
     - behat_suites.yml

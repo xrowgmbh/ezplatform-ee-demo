@@ -1,0 +1,49 @@
+<div class="items-container">
+    <h3 class="form-items-title">Select content item for each user segment:</h3>
+
+    <div class="form-items">
+        {{#each items}}
+            <div class="item{{#if this.invalidContent}} invalid-content{{/if}} {{#if this.invalidTag}} invalid-tag{{/if}}" data-item-index="{{@index}}">
+                <div class="tag-container ng-tags-input-ui" id="eztags-item-tag-{{@index}}" data-item-index="{{@index}}">
+                    <input class="tagnames" type="hidden" value="{{#if this.tagName}}{{this.tagName}}{{/if}}">
+                    <input class="tagpids" type="hidden" value="{{#if this.tagPid}}{{this.tagPid}}{{/if}}">
+                    <input class="tagids" type="hidden" value="{{#if this.tagId}}{{this.tagId}}{{/if}}">
+                    <input class="taglocales" type="hidden" value="{{#if this.tagLocate}}{{this.tagLocate}}{{/if}}">
+                </div>
+                <div class="content-container">
+                     <button class="item-content{{#unless this.contentId}} item-content-new{{/unless}}" data-item-index="{{@index}}">
+                     {{#if this.contentName}}
+                        {{this.contentName}}
+                     {{else}}
+                        Select Content
+                     {{/if}}
+                     </button>
+                </div>
+                <div class="buttons">
+                    <button class="delete-item ezs-icon-send-to-trash{{#if @first}}{{#if @last}} item-disabled{{/if}}{{/if}}"
+                    data-item-index="{{@index}}"
+                    {{#if @first}}{{#if @last}}disabled{{/if}}{{/if}}>
+                    </button>
+
+                    {{#if @last}}
+                        <button class="add-item"></button>
+                    {{/if}}
+                </div>
+            </div>
+        {{/each}}
+
+        <div class="item item-disabled">
+            <div class="tag-container">
+                <input name="tag[]" class="item-tag" disabled />
+            </div>
+            <div class="content-container">
+                 <button class="item-content" disabled>Content</button>
+            </div>
+            <div class="buttons">
+                <button class="delete-item ezs-icon-send-to-trash" disabled></button>
+                <button class="add-item" disabled></button>
+            </div>
+
+         </div>
+    </div>
+</div>
