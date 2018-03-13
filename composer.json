@@ -73,7 +73,7 @@
         "netgen/tagsbundle": "^3.1@dev",
         "components/bootstrap": "3.3.5",
         "components/handlebars.js": "~3.0.0",
-        "ezsystems/ezstudio-personalized-block": "^1.1@rc",
+        "ezsystems/ezstudio-personalized-block": "^1.2@rc",
         "ezsystems/recommendation-bundle": "^2.0@rc",
         "symfony/thanks": "^1.0"
     },
