@@ -1336,23 +1336,23 @@
         },
         {
             "name": "ezsystems/ezplatform-http-cache-fastly",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/ezplatform-http-cache-fastly.git",
-                "reference": "5e4d20998600792de0899fb26ae7d9d39e6ed7fc"
+                "reference": "9d4d6047f74a73a1d8c5f84e5e9c0b1310dfd199"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezplatform-http-cache-fastly-5e4d20998600792de0899fb26ae7d9d39e6ed7fc-zip-2adce5.zip",
-                "reference": "5e4d20998600792de0899fb26ae7d9d39e6ed7fc",
-                "shasum": "637f29ca318d2aca735d5305782f2bc8378b5aff"
+                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezplatform-http-cache-fastly-9d4d6047f74a73a1d8c5f84e5e9c0b1310dfd199-zip-7d8823.zip",
+                "reference": "9d4d6047f74a73a1d8c5f84e5e9c0b1310dfd199",
+                "shasum": "96ed014e285f0dc7610e230a36b45f1b8fc0c1f8"
             },
             "require": {
                 "ezsystems/ezplatform-http-cache": "~0.5",
                 "ezsystems/ezpublish-kernel": "^6.13.1 || ^7.0",
-                "friendsofsymfony/http-cache-bundle": "~1.2|^1.3.8",
-                "symfony/symfony": "^2.7 | ^3.1"
+                "friendsofsymfony/http-cache-bundle": "~1.2 || ^1.3.8",
+                "symfony/symfony": "^2.7 || ^3.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~2.7.1"
@@ -1385,10 +1385,10 @@
             ],
             "description": "Fastly HTTP cache handling for eZ Platform.",
             "support": {
-                "source": "https://github.com/ezsystems/ezplatform-http-cache-fastly/tree/v1.1.0-rc2",
+                "source": "https://github.com/ezsystems/ezplatform-http-cache-fastly/tree/v1.1.1",
                 "issues": "https://github.com/ezsystems/ezplatform-http-cache-fastly/issues"
             },
-            "time": "2018-03-23T12:49:45+00:00"
+            "time": "2018-04-20T15:48:50+00:00"
         },
         {
             "name": "ezsystems/ezplatform-multi-file-upload",
