@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "bbce2c564f0f108b726292b244112962",
@@ -552,16 +552,16 @@
         },
         {
             "name": "doctrine/dbal",
-            "version": "v2.6.3",
+            "version": "v2.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "e3eed9b1facbb0ced3a0995244843a189e7d1b13"
+                "reference": "11037b4352c008373561dc6fc836834eed80c3b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/e3eed9b1facbb0ced3a0995244843a189e7d1b13",
-                "reference": "e3eed9b1facbb0ced3a0995244843a189e7d1b13",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/11037b4352c008373561dc6fc836834eed80c3b5",
+                "reference": "11037b4352c008373561dc6fc836834eed80c3b5",
                 "shasum": ""
             },
             "require": {
@@ -570,9 +570,11 @@
                 "php": "^7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.4.6",
+                "doctrine/coding-standard": "^4.0",
+                "phpunit/phpunit": "^7.0",
                 "phpunit/phpunit-mock-objects": "!=3.2.4,!=3.2.5",
-                "symfony/console": "2.*||^3.0"
+                "symfony/console": "^2.0.5||^3.0",
+                "symfony/phpunit-bridge": "^3.4.5|^4.0.5"
             },
             "suggest": {
                 "symfony/console": "For helpful console commands such as SQL execution and import of files."
@@ -583,7 +585,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.6.x-dev"
+                    "dev-master": "2.7.x-dev"
                 }
             },
             "autoload": {
@@ -621,7 +623,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2017-11-19T13:38:54+00:00"
+            "time": "2018-04-07T18:44:18+00:00"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1576,23 +1578,23 @@
         },
         {
             "name": "ezsystems/ezplatform-http-cache-fastly",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/ezplatform-http-cache-fastly.git",
-                "reference": "5e4d20998600792de0899fb26ae7d9d39e6ed7fc"
+                "reference": "9d4d6047f74a73a1d8c5f84e5e9c0b1310dfd199"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezplatform-http-cache-fastly-5e4d20998600792de0899fb26ae7d9d39e6ed7fc-zip-2adce5.zip",
-                "reference": "5e4d20998600792de0899fb26ae7d9d39e6ed7fc",
-                "shasum": "637f29ca318d2aca735d5305782f2bc8378b5aff"
+                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezplatform-http-cache-fastly-9d4d6047f74a73a1d8c5f84e5e9c0b1310dfd199-zip-7d8823.zip",
+                "reference": "9d4d6047f74a73a1d8c5f84e5e9c0b1310dfd199",
+                "shasum": "96ed014e285f0dc7610e230a36b45f1b8fc0c1f8"
             },
             "require": {
                 "ezsystems/ezplatform-http-cache": "~0.5",
                 "ezsystems/ezpublish-kernel": "^6.13.1 || ^7.0",
-                "friendsofsymfony/http-cache-bundle": "~1.2|^1.3.8",
-                "symfony/symfony": "^2.7 | ^3.1"
+                "friendsofsymfony/http-cache-bundle": "~1.2 || ^1.3.8",
+                "symfony/symfony": "^2.7 || ^3.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "~2.7.1"
@@ -1625,10 +1627,10 @@
             ],
             "description": "Fastly HTTP cache handling for eZ Platform.",
             "support": {
-                "source": "https://github.com/ezsystems/ezplatform-http-cache-fastly/tree/v1.1.0-rc2",
+                "source": "https://github.com/ezsystems/ezplatform-http-cache-fastly/tree/v1.1.1",
                 "issues": "https://github.com/ezsystems/ezplatform-http-cache-fastly/issues"
             },
-            "time": "2018-03-23T12:49:45+00:00"
+            "time": "2018-04-20T15:48:50+00:00"
         },
         {
             "name": "ezsystems/ezplatform-solr-search-engine",
@@ -1682,16 +1684,16 @@
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v7.1.0",
+            "version": "v7.1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "d4d031fc84d1a181534afb860876c3aca1b21266"
+                "reference": "43a80d3c1e7ff1f6290baf0fc04db7433e1ddeff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/d4d031fc84d1a181534afb860876c3aca1b21266",
-                "reference": "d4d031fc84d1a181534afb860876c3aca1b21266",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/43a80d3c1e7ff1f6290baf0fc04db7433e1ddeff",
+                "reference": "43a80d3c1e7ff1f6290baf0fc04db7433e1ddeff",
                 "shasum": ""
             },
             "require": {
@@ -1720,6 +1722,10 @@
                 "symfony-cmf/routing": "^1.1|^2.0",
                 "symfony/symfony": "^3.4",
                 "twig/twig": "~1.27|~2.0"
+            },
+            "conflict": {
+                "doctrine/dbal": "2.7.0",
+                "symfony/symfony": "3.4.7"
             },
             "replace": {
                 "ezsystems/ezpublish": "*",
@@ -1761,7 +1767,7 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "https://ezplatform.com",
-            "time": "2018-03-26T17:47:00+00:00"
+            "time": "2018-04-21T12:30:50+00:00"
         },
         {
             "name": "ezsystems/ezstudio-cron",
@@ -2325,17 +2331,17 @@
         },
         {
             "name": "ezsystems/studio-ui-bundle",
-            "version": "v2.1.0",
+            "version": "v2.1.0.1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/StudioUIBundle.git",
-                "reference": "e0d21c7a5fb574aeffecdefe702fc2d95b434f14"
+                "reference": "7f8252072bf2be218e59a5b11cfd957fcc0b0de6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-studio-ui-bundle-e0d21c7a5fb574aeffecdefe702fc2d95b434f14-zip-68fad2.zip",
-                "reference": "e0d21c7a5fb574aeffecdefe702fc2d95b434f14",
-                "shasum": "a33cf684d7ed5236d1ad0467872de7bf2989d88e"
+                "url": "https://updates.ez.no/ttl/dist/ezsystems-studio-ui-bundle-7f8252072bf2be218e59a5b11cfd957fcc0b0de6-zip-0cc10d.zip",
+                "reference": "7f8252072bf2be218e59a5b11cfd957fcc0b0de6",
+                "shasum": "2250c0c2f088ead6226dde584ad54a48f41d1f9b"
             },
             "require": {
                 "ezsystems/ezplatform-ee-assets": "^3.0",
@@ -2365,9 +2371,9 @@
             ],
             "description": "eZ Studio UI Bundle",
             "support": {
-                "source": "https://github.com/ezsystems/StudioUIBundle/tree/master"
+                "source": "https://github.com/ezsystems/StudioUIBundle/tree/v2.1.0.1"
             },
-            "time": "2018-03-21T14:18:01+00:00"
+            "time": "2018-04-10T06:55:21+00:00"
         },
         {
             "name": "fig/link-util",
@@ -6404,16 +6410,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.4.7",
+            "version": "v3.4.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "eb07b0eab0bda8441fbf94d06ad1f9896e0552cc"
+                "reference": "5304a36c5efbb01af7efe2bb5b1953dbaeebc293"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/eb07b0eab0bda8441fbf94d06ad1f9896e0552cc",
-                "reference": "eb07b0eab0bda8441fbf94d06ad1f9896e0552cc",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/5304a36c5efbb01af7efe2bb5b1953dbaeebc293",
+                "reference": "5304a36c5efbb01af7efe2bb5b1953dbaeebc293",
                 "shasum": ""
             },
             "require": {
@@ -6554,7 +6560,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-04-03T05:50:03+00:00"
+            "time": "2018-04-06T15:20:04+00:00"
         },
         {
             "name": "symfony/thanks",
