@@ -40,7 +40,7 @@
         "sensio/distribution-bundle": "^5.0.19",
         "incenteev/composer-parameter-handler": "~2.1",
         "ezsystems/ezpublish-kernel": "^7.1@dev",
-        "ezsystems/repository-forms": "^2.1@dev",
+        "ezsystems/repository-forms": "~2.1.1@rc",
         "ezsystems/ezplatform-solr-search-engine": "^1.5@dev",
         "ezsystems/ez-support-tools": "^0.2@dev",
         "ezsystems/ezplatform-http-cache": "~0.6@dev",
