@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f69953af7132441c84ff12a75174709",
+    "content-hash": "8bb085e1181acfd5ab19ceb6b0bfda37",
     "packages": [
         {
             "name": "components/bootstrap",
@@ -1284,20 +1284,20 @@
         },
         {
             "name": "ezsystems/ezplatform-http-cache",
-            "version": "v0.6.0.1",
+            "version": "v0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezplatform-http-cache.git",
-                "reference": "79a76e90d1451f928f2d8b516c0b743ada47bc58"
+                "reference": "d9a5508a0af6be6157457e520a9a7678db967474"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezplatform-http-cache/zipball/79a76e90d1451f928f2d8b516c0b743ada47bc58",
-                "reference": "79a76e90d1451f928f2d8b516c0b743ada47bc58",
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-http-cache/zipball/d9a5508a0af6be6157457e520a9a7678db967474",
+                "reference": "d9a5508a0af6be6157457e520a9a7678db967474",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezpublish-kernel": "^6.13.2@dev || ^7.1@dev",
+                "ezsystems/ezpublish-kernel": "^6.13.2 || ^7.1",
                 "friendsofsymfony/http-cache-bundle": "^1.3.13",
                 "symfony/symfony": "^2.7 | ^3.1"
             },
@@ -1332,7 +1332,7 @@
                 }
             ],
             "description": "HTTP cache handling for eZ Platform.",
-            "time": "2018-04-23T07:41:45+00:00"
+            "time": "2018-05-23T18:07:58+00:00"
         },
         {
             "name": "ezsystems/ezplatform-http-cache-fastly",
@@ -1441,20 +1441,20 @@
         },
         {
             "name": "ezsystems/ezplatform-solr-search-engine",
-            "version": "v1.5.1.1",
+            "version": "v1.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezplatform-solr-search-engine.git",
-                "reference": "aca8ca462238fbbf1a6192fe0c5b78db6a9e2a3d"
+                "reference": "3bcf30322e931cd8b55498fcd7f8a0c3de23c90e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezplatform-solr-search-engine/zipball/aca8ca462238fbbf1a6192fe0c5b78db6a9e2a3d",
-                "reference": "aca8ca462238fbbf1a6192fe0c5b78db6a9e2a3d",
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-solr-search-engine/zipball/3bcf30322e931cd8b55498fcd7f8a0c3de23c90e",
+                "reference": "3bcf30322e931cd8b55498fcd7f8a0c3de23c90e",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ezpublish-kernel": "~6.7.7@dev|^6.12.1@dev|^7.0@dev",
+                "ezsystems/ezpublish-kernel": "~6.7.7|^6.12.1|^7.0",
                 "netgen/query-translator": "^1.0",
                 "php": "~5.6|~7.0"
             },
@@ -1487,20 +1487,20 @@
             ],
             "description": "Solr search engine implementation for eZ Platform",
             "homepage": "https://github.com/ezsystems/ezplatform-solr-search-engine",
-            "time": "2018-03-06T14:40:17+00:00"
+            "time": "2018-05-23T18:05:48+00:00"
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v6.13.2",
+            "version": "v6.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "76dae4930491cfb107d6910f2ee1f5233c0d8e04"
+                "reference": "1455c1c74c1cb97b92dd9eaa9035963ead24c581"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/76dae4930491cfb107d6910f2ee1f5233c0d8e04",
-                "reference": "76dae4930491cfb107d6910f2ee1f5233c0d8e04",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/1455c1c74c1cb97b92dd9eaa9035963ead24c581",
+                "reference": "1455c1c74c1cb97b92dd9eaa9035963ead24c581",
                 "shasum": ""
             },
             "require": {
@@ -1578,14 +1578,14 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "https://ezplatform.com",
-            "time": "2018-04-11T21:55:05+00:00"
+            "time": "2018-05-29T11:31:41+00:00"
         },
         {
             "name": "ezsystems/ezstudio-cron",
             "version": "v1.0.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:ezsystems/ezstudio-cron.git",
+                "url": "https://github.com/ezsystems/ezstudio-cron.git",
                 "reference": "120157a858f95bc2504a36c9fd23b1dc2b14564c"
             },
             "dist": {
@@ -1721,24 +1721,24 @@
             ],
             "description": "Data for ezsystems/ezstudio-demo-bundle",
             "support": {
-                "source": "https://github.com/ezsystems/ezstudio-demo-bundle-data/tree/master",
+                "source": "https://github.com/ezsystems/ezstudio-demo-bundle-data/tree/v1.8.0",
                 "issues": "https://github.com/ezsystems/ezstudio-demo-bundle-data/issues"
             },
             "time": "2016-12-16T13:45:09+00:00"
         },
         {
             "name": "ezsystems/ezstudio-form-builder",
-            "version": "v1.3.1",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/ezstudio-form-builder.git",
-                "reference": "115a762d72ea208d39059f27af9dbadb5f45e668"
+                "reference": "10f59b51b6c38a49c62296c0350b0b73b5df9837"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezstudio-form-builder-115a762d72ea208d39059f27af9dbadb5f45e668-zip-fc51d5.zip",
-                "reference": "115a762d72ea208d39059f27af9dbadb5f45e668",
-                "shasum": "11b095555ec6fd9c4b8ecc50f87362fd99f3c793"
+                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezstudio-form-builder-10f59b51b6c38a49c62296c0350b0b73b5df9837-zip-03b3db.zip",
+                "reference": "10f59b51b6c38a49c62296c0350b0b73b5df9837",
+                "shasum": "776081714313fab6e938627ff5ffb84ba7188bf4"
             },
             "require": {
                 "ezsystems/ezpublish-kernel": "^6.8",
@@ -1782,7 +1782,7 @@
             "support": {
                 "source": "https://github.com/ezsystems/ezstudio-form-builder/tree/1.3"
             },
-            "time": "2018-03-23T16:07:54+00:00"
+            "time": "2018-06-05T17:14:00+00:00"
         },
         {
             "name": "ezsystems/ezstudio-notifications",
@@ -1827,8 +1827,7 @@
             ],
             "description": "Notification extension for eZ Studio",
             "support": {
-                "source": "https://github.com/ezsystems/ezstudio-notifications/tree/v1.2.0",
-                "issues": "https://github.com/ezsystems/ezstudio-notifications/issues"
+                "source": "https://github.com/ezsystems/ezstudio-notifications/tree/v1.2.0"
             },
             "time": "2016-06-29T11:17:19+00:00"
         },
@@ -1872,7 +1871,7 @@
             ],
             "description": "Personalized Block for eZ Studio Landing Page Field Type",
             "support": {
-                "source": "https://github.com/ezsystems/ezstudio-personalized-block/tree/master",
+                "source": "https://github.com/ezsystems/ezstudio-personalized-block/tree/v1.1.1-rc1",
                 "issues": "https://github.com/ezsystems/ezstudio-personalized-block/issues"
             },
             "time": "2018-01-19T16:07:09+00:00"
@@ -1997,16 +1996,16 @@
         },
         {
             "name": "ezsystems/platform-ui-assets-bundle",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/PlatformUIAssetsBundle.git",
-                "reference": "83663a5bb95d91299040ebe94e53fb0c348a4e20"
+                "reference": "623ca66dc0c1f40722781321180724974dc17a36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/PlatformUIAssetsBundle/zipball/83663a5bb95d91299040ebe94e53fb0c348a4e20",
-                "reference": "83663a5bb95d91299040ebe94e53fb0c348a4e20",
+                "url": "https://api.github.com/repos/ezsystems/PlatformUIAssetsBundle/zipball/623ca66dc0c1f40722781321180724974dc17a36",
+                "reference": "623ca66dc0c1f40722781321180724974dc17a36",
                 "shasum": ""
             },
             "require": {
@@ -2029,26 +2028,26 @@
                 }
             ],
             "description": "External assets dependencies for PlatformUIBundle",
-            "time": "2018-05-08T09:17:23+00:00"
+            "time": "2018-06-11T08:22:04+00:00"
         },
         {
             "name": "ezsystems/platform-ui-bundle",
-            "version": "v1.13.2",
+            "version": "v1.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/PlatformUIBundle.git",
-                "reference": "6795eab903ea44ac547f8c363560870e05d14764"
+                "reference": "449750f630d9524662451c7e534bb676371e3e8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/6795eab903ea44ac547f8c363560870e05d14764",
-                "reference": "6795eab903ea44ac547f8c363560870e05d14764",
+                "url": "https://api.github.com/repos/ezsystems/PlatformUIBundle/zipball/449750f630d9524662451c7e534bb676371e3e8c",
+                "reference": "449750f630d9524662451c7e534bb676371e3e8c",
                 "shasum": ""
             },
             "require": {
                 "ezsystems/ez-support-tools": "^0.2",
-                "ezsystems/ezpublish-kernel": "^6.13.2@dev",
-                "ezsystems/platform-ui-assets-bundle": "^4.1.0",
+                "ezsystems/ezpublish-kernel": "^6.13.3@dev",
+                "ezsystems/platform-ui-assets-bundle": "^4.2.0",
                 "ezsystems/repository-forms": "^1.11",
                 "jms/translation-bundle": "^1.3",
                 "willdurand/js-translation-bundle": "^2.5",
@@ -2080,7 +2079,7 @@
                 "GPL-2.0-only"
             ],
             "description": "eZ Platform UI Bundle",
-            "time": "2018-04-16T09:59:57+00:00"
+            "time": "2018-05-17T09:01:21+00:00"
         },
         {
             "name": "ezsystems/recommendation-bundle",
@@ -2132,16 +2131,16 @@
         },
         {
             "name": "ezsystems/repository-forms",
-            "version": "v1.11.1",
+            "version": "v1.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/repository-forms.git",
-                "reference": "f4569a6cb9a22018d1a902c0f814576f09e0a9d1"
+                "reference": "a8290b1f8e4e777a30b82f30c6c68ad99aa77916"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/repository-forms/zipball/f4569a6cb9a22018d1a902c0f814576f09e0a9d1",
-                "reference": "f4569a6cb9a22018d1a902c0f814576f09e0a9d1",
+                "url": "https://api.github.com/repos/ezsystems/repository-forms/zipball/a8290b1f8e4e777a30b82f30c6c68ad99aa77916",
+                "reference": "a8290b1f8e4e777a30b82f30c6c68ad99aa77916",
                 "shasum": ""
             },
             "require": {
@@ -2186,7 +2185,7 @@
                 }
             ],
             "description": "Use Symfony forms with eZ Platform repository objects",
-            "time": "2018-04-11T09:05:16+00:00"
+            "time": "2018-04-12T11:30:25+00:00"
         },
         {
             "name": "ezsystems/share-buttons-bundle",
@@ -2240,17 +2239,17 @@
         },
         {
             "name": "ezsystems/studio-ui-bundle",
-            "version": "v1.13.2",
+            "version": "v1.13.3",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/StudioUIBundle.git",
-                "reference": "c6ddd255e5ecfa53520df2dcde31ce600671119a"
+                "reference": "f0b23adad99b940f2c6c704458c3976317a12118"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-studio-ui-bundle-c6ddd255e5ecfa53520df2dcde31ce600671119a-zip-7942f9.zip",
-                "reference": "c6ddd255e5ecfa53520df2dcde31ce600671119a",
-                "shasum": "a54033ed0c5bfe0dd0908336d34fbcc04673efdd"
+                "url": "https://updates.ez.no/ttl/dist/ezsystems-studio-ui-bundle-f0b23adad99b940f2c6c704458c3976317a12118-zip-75073c.zip",
+                "reference": "f0b23adad99b940f2c6c704458c3976317a12118",
+                "shasum": "814e30e64f18d3bb2db3c9b7c3cb44bf9a952813"
             },
             "require": {
                 "ezsystems/ezplatform-ee-assets": "^2.0.0",
@@ -2280,9 +2279,9 @@
             ],
             "description": "eZ Studio UI Bundle",
             "support": {
-                "source": "https://github.com/ezsystems/StudioUIBundle/tree/v1.13.2-rc3"
+                "source": "https://github.com/ezsystems/StudioUIBundle/tree/1.13"
             },
-            "time": "2018-04-16T13:19:38+00:00"
+            "time": "2018-05-16T08:08:26+00:00"
         },
         {
             "name": "friendsofsymfony/http-cache",
@@ -4238,16 +4237,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.12",
+            "version": "v2.0.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb"
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
-                "reference": "258c89a6b97de7dfaf5b8c7607d0478e236b04fb",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/10bcb46e8f3d365170f6de9d05245aa066b81f09",
+                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09",
                 "shasum": ""
             },
             "require": {
@@ -4279,10 +4278,11 @@
             "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
             "keywords": [
                 "csprng",
+                "polyfill",
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-04-04T21:24:14+00:00"
+            "time": "2018-06-08T15:26:40+00:00"
         },
         {
             "name": "psr/cache",
@@ -4537,12 +4537,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "6fe712594835e5b70de30aec5fc244a7bd8464cd"
+                "reference": "0e4ea9f9e1fd3c6a563524f8f399696d98c7c85a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/6fe712594835e5b70de30aec5fc244a7bd8464cd",
-                "reference": "6fe712594835e5b70de30aec5fc244a7bd8464cd",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0e4ea9f9e1fd3c6a563524f8f399696d98c7c85a",
+                "reference": "0e4ea9f9e1fd3c6a563524f8f399696d98c7c85a",
                 "shasum": ""
             },
             "conflict": {
@@ -4553,7 +4553,7 @@
                 "asymmetricrypt/asymmetricrypt": ">=0,<9.9.99",
                 "aws/aws-sdk-php": ">=3,<3.2.1",
                 "bugsnag/bugsnag-laravel": ">=2,<2.0.2",
-                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4",
+                "cakephp/cakephp": ">=1.3,<1.3.18|>=2,<2.4.99|>=2.5,<2.5.99|>=2.6,<2.6.12|>=2.7,<2.7.6|>=3,<3.0.15|>=3.1,<3.1.4|>=3.4,<3.4.14|>=3.5,<3.5.17|>=3.6,<3.6.4",
                 "cart2quote/module-quotation": ">=4.1.6,<=4.4.5|>=5,<5.4.4",
                 "cartalyst/sentry": "<=2.1.6",
                 "codeigniter/framework": "<=3.0.6",
@@ -4610,6 +4610,7 @@
                 "propel/propel1": ">=1,<=1.7.1",
                 "pusher/pusher-php-server": "<2.2.1",
                 "sabre/dav": ">=1.6,<1.6.99|>=1.7,<1.7.11|>=1.8,<1.8.9",
+                "sensiolabs/connect": "<4.2.3",
                 "shopware/shopware": "<5.3.7",
                 "silverstripe/cms": ">=3,<=3.0.11|>=3.1,<3.1.11",
                 "silverstripe/forum": "<=0.6.1|>=0.7,<=0.7.3",
@@ -4626,16 +4627,18 @@
                 "symfony/dependency-injection": ">=2,<2.0.17",
                 "symfony/form": ">=2.3,<2.3.35|>=2.4,<2.6.12|>=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
                 "symfony/framework-bundle": ">=2,<2.3.18|>=2.4,<2.4.8|>=2.5,<2.5.2",
-                "symfony/http-foundation": ">=2,<2.3.27|>=2.4,<2.5.11|>=2.6,<2.6.6",
+                "symfony/http-foundation": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
                 "symfony/http-kernel": ">=2,<2.3.29|>=2.4,<2.5.12|>=2.6,<2.6.8",
                 "symfony/intl": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
                 "symfony/routing": ">=2,<2.0.19",
-                "symfony/security": ">=2,<2.0.25|>=2.1,<2.1.13|>=2.2,<2.2.9|>=2.3,<2.3.37|>=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8.23,<2.8.25|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5",
-                "symfony/security-core": ">=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8,<2.8.6|>=2.8.23,<2.8.25|>=3,<3.0.6|>=3.2.10,<3.2.12|>=3.3.3,<3.3.5",
-                "symfony/security-csrf": ">=2.7,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
-                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/security": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-bundle": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-core": ">=2.4,<2.6.13|>=2.7,<2.7.9|>=2.7.30,<2.7.32|>=2.8,<2.8.37|>=3,<3.3.17|>=3.4,<3.4.7|>=4,<4.0.7",
+                "symfony/security-csrf": ">=2.4,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-guard": ">=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
+                "symfony/security-http": ">=2.3,<2.3.41|>=2.4,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
                 "symfony/serializer": ">=2,<2.0.11",
-                "symfony/symfony": ">=2,<2.3.41|>=2.4,<2.7.38|>=2.8,<2.8.31|>=3,<3.2.14|>=3.3,<3.3.13",
+                "symfony/symfony": ">=2,<2.7.48|>=2.8,<2.8.41|>=3,<3.3.17|>=3.4,<3.4.11|>=4,<4.0.11",
                 "symfony/translation": ">=2,<2.0.17",
                 "symfony/validator": ">=2,<2.0.24|>=2.1,<2.1.12|>=2.2,<2.2.5|>=2.3,<2.3.3",
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
@@ -4693,7 +4696,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-05-11T06:55:15+00:00"
+            "time": "2018-06-08T09:55:50+00:00"
         },
         {
             "name": "robloach/component-installer",
@@ -4745,16 +4748,16 @@
         },
         {
             "name": "sensio/distribution-bundle",
-            "version": "v5.0.21",
+            "version": "v5.0.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioDistributionBundle.git",
-                "reference": "eb6266b3b472e4002538610b28a0a04bcf94891a"
+                "reference": "209b11f8cee5bf71986dd703e45e27d3ed7a6d15"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/eb6266b3b472e4002538610b28a0a04bcf94891a",
-                "reference": "eb6266b3b472e4002538610b28a0a04bcf94891a",
+                "url": "https://api.github.com/repos/sensiolabs/SensioDistributionBundle/zipball/209b11f8cee5bf71986dd703e45e27d3ed7a6d15",
+                "reference": "209b11f8cee5bf71986dd703e45e27d3ed7a6d15",
                 "shasum": ""
             },
             "require": {
@@ -4793,7 +4796,7 @@
                 "configuration",
                 "distribution"
             ],
-            "time": "2017-08-25T16:55:44+00:00"
+            "time": "2018-06-07T06:22:12+00:00"
         },
         {
             "name": "sensio/framework-extra-bundle",
@@ -5146,34 +5149,35 @@
                 "compression",
                 "minification"
             ],
+            "abandoned": "symfony/webpack-encore-pack",
             "time": "2017-07-14T07:26:46+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v3.2.0",
+            "version": "v3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "8781649349fe418d51d194f8c9d212c0b97c40dd"
+                "reference": "8204f3cd7c1bd6a6e2955c0a34475243a7bd9802"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/8781649349fe418d51d194f8c9d212c0b97c40dd",
-                "reference": "8781649349fe418d51d194f8c9d212c0b97c40dd",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/8204f3cd7c1bd6a6e2955c0a34475243a7bd9802",
+                "reference": "8204f3cd7c1bd6a6e2955c0a34475243a7bd9802",
                 "shasum": ""
             },
             "require": {
                 "monolog/monolog": "~1.22",
-                "php": ">=5.3.2",
-                "symfony/config": "~2.7|~3.0|~4.0",
-                "symfony/dependency-injection": "~2.7|~3.0|~4.0",
-                "symfony/http-kernel": "~2.7|~3.0|~4.0",
-                "symfony/monolog-bridge": "~2.7|~3.0|~4.0"
+                "php": ">=5.6",
+                "symfony/config": "~2.7|~3.3|~4.0",
+                "symfony/dependency-injection": "~2.7|~3.4.10|^4.0.10",
+                "symfony/http-kernel": "~2.7|~3.3|~4.0",
+                "symfony/monolog-bridge": "~2.7|~3.3|~4.0"
             },
             "require-dev": {
-                "symfony/console": "~2.3|~3.0|~4.0",
+                "symfony/console": "~2.7|~3.3|~4.0",
                 "symfony/phpunit-bridge": "^3.3|^4.0",
-                "symfony/yaml": "~2.3|~3.0|~4.0"
+                "symfony/yaml": "~2.7|~3.3|~4.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -5209,7 +5213,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2018-03-05T14:51:36+00:00"
+            "time": "2018-06-04T05:55:43+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -5266,6 +5270,61 @@
                 "shim"
             ],
             "time": "2018-04-26T10:06:28+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "reference": "7cc359f1b7b80fc25ed7796be7d96adc9b354bae",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                },
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "time": "2018-04-30T19:57:29+00:00"
         },
         {
             "name": "symfony/polyfill-intl-icu",
@@ -5787,16 +5846,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v2.8.39",
+            "version": "v2.8.41",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "9b75ffe7b3adf2dad279e968787b71f829c1c404"
+                "reference": "24fc640d544a67869a4106de5fc303c597398629"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/9b75ffe7b3adf2dad279e968787b71f829c1c404",
-                "reference": "9b75ffe7b3adf2dad279e968787b71f829c1c404",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/24fc640d544a67869a4106de5fc303c597398629",
+                "reference": "24fc640d544a67869a4106de5fc303c597398629",
                 "shasum": ""
             },
             "require": {
@@ -5805,6 +5864,7 @@
                 "php": ">=5.3.9",
                 "psr/log": "~1.0",
                 "symfony/polyfill-apcu": "~1.1",
+                "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-intl-icu": "~1.0",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/polyfill-php54": "~1.0",
@@ -5922,7 +5982,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2018-04-30T05:53:09+00:00"
+            "time": "2018-05-25T12:03:11+00:00"
         },
         {
             "name": "tedivm/stash",
@@ -7092,16 +7152,16 @@
         },
         {
             "name": "behat/symfony2-extension",
-            "version": "2.1.4",
+            "version": "2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Behat/Symfony2Extension.git",
-                "reference": "022ece0c1f7e88be720fd94a47e5a512cebdc328"
+                "reference": "d7c834487426a784665f9c1e61132274dbf2ea26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/022ece0c1f7e88be720fd94a47e5a512cebdc328",
-                "reference": "022ece0c1f7e88be720fd94a47e5a512cebdc328",
+                "url": "https://api.github.com/repos/Behat/Symfony2Extension/zipball/d7c834487426a784665f9c1e61132274dbf2ea26",
+                "reference": "d7c834487426a784665f9c1e61132274dbf2ea26",
                 "shasum": ""
             },
             "require": {
@@ -7149,7 +7209,7 @@
                 "framework",
                 "symfony"
             ],
-            "time": "2017-12-13T16:50:51+00:00"
+            "time": "2018-04-20T15:48:23+00:00"
         },
         {
             "name": "behat/transliterator",
