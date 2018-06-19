@@ -172,7 +172,7 @@
             });
 
             $('.filters .btn-clear').click(function () {
-                $('.filter-container input[type="checkbox"]').attr('checked', false);
+                $('.filter-container input[type="checkbox"]').prop('checked', false);
                 countCheckedCheckboxes();
                 return false;
             });
