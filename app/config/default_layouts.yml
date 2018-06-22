@@ -83,13 +83,13 @@ ezplatform_page_fieldtype:
                     template: '@ezdesign/blocks/contentlist.html.twig'
                     name: 'Platform EE Demo contentlist'
 
-                schedule_hero:
-                    template: '@ezdesign/blocks/schedule_hero.html.twig'
-                    name: 'Platform EE Demo schedule hero'
-
                 tastes_contentlist:
                     template: '@ezdesign/blocks/tastes_contentlist.html.twig'
                     name: 'Platform EE Demo tastes contentlist'
+
+                places_contentlist:
+                    template: '@ezdesign/blocks/places_contentlist.html.twig'
+                    name: 'Platform EE Demo places contentlist'
 
         banner:
             views:
@@ -106,10 +106,6 @@ ezplatform_page_fieldtype:
                 embed:
                     template: '@ezdesign/blocks/embed.html.twig'
                     name: 'Platform EE Demo embed block'
-
-                blog:
-                    template: '@ezdesign/blocks/blog.html.twig'
-                    name: 'Platform EE Demo blog block'
 
                 embed_wide:
                     template: '@ezdesign/blocks/embed_wide.html.twig'

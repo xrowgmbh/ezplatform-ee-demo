@@ -277,7 +277,6 @@ article.grid-list p {
     border-left: 2px solid #ebebeb;
 }
 
-.schedule-layout--grid-list li.media,
 .feeds li {
     background: #fff;
     display: table;
@@ -286,7 +285,6 @@ article.grid-list p {
     width: 100%;
 }
 
-.schedule-layout--grid-list li.media:before,
 .feeds li:before {
     padding-left: 20px;
     padding-top: 20px;

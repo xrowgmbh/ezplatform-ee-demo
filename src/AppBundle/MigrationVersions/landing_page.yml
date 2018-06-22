@@ -211,6 +211,54 @@
                             "value": [reference:ref_content_folder__home__places_and_tastes__tastes]
                          }
                       ]
+                    },
+                    {
+                        "id": "b-294fbffd-744a-6ac6-3f29-9783799c1xb6",
+                        "type": "contentlist",
+                        "name": "Content List",
+                        "view": "places_contentlist",
+                        "compiled": "",
+                        "attributes": [
+                            {
+                                "id": "",
+                                "name": "contentId",
+                                "value": [reference:ref_content_place_list__home__places_and_tastes__places]
+                            },
+                            {
+                                "id": "",
+                                "name": "limit",
+                                "value": "3"
+                            },
+                            {
+                                "id": "",
+                                "name": "contentType",
+                                "value": "place"
+                            }
+                        ]
+                    },
+                    {
+                        "id": "b-294fbffd-744a-6ac6-3f29-9783799c1xa5",
+                        "type": "contentlist",
+                        "name": "Content List",
+                        "view": "tastes_contentlist",
+                        "compiled": "",
+                        "attributes": [
+                            {
+                                "id": "",
+                                "name": "contentId",
+                                "value": [reference:ref_content_folder__home__places_and_tastes__tastes]
+                            },
+                            {
+                                "id": "",
+                                "name": "limit",
+                                "value": "3"
+                            },
+                            {
+                                "id": "",
+                                "name": "contentType",
+                                "value": "article"
+                            }
+                        ]
                     }
                   ]
                 },
