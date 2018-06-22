@@ -3,7 +3,7 @@ ezplatform_page_fieldtype:
         hero:
             name: Hero
             category: default
-            thumbnail: 'assets/images/page_builder/blocks/hero.svg'
+            thumbnail: '/assets/images/page_builder/blocks/hero.svg#hero'
             configuration_template: '@EzPlatformPageBuilder/page_builder/block/config/embed.html.twig'
             views:
                 default: { name: 'Default block layout', template: '@ezdesign/blocks/hero.html.twig' }
