@@ -1,3 +1,7 @@
+--
+-- Flex Workflow
+--
+
 DROP TABLE IF EXISTS `ezflexworkflow`;
 CREATE TABLE `ezflexworkflow` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -16,7 +20,7 @@ CREATE TABLE `ezflexworkflow` (
   KEY `content_owner_id` (`content_owner_id`),
   KEY `previous_owner_id` (`previous_owner_id`),
   KEY `new_owner_id` (`new_owner_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezflexworkflow_message`;
 CREATE TABLE `ezflexworkflow_message` (
@@ -30,20 +34,11 @@ CREATE TABLE `ezflexworkflow_message` (
   KEY `content_id` (`content_id`),
   KEY `sender_id` (`sender_id`),
   KEY `receiver_id` (`receiver_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-DROP TABLE IF EXISTS `eznotification`;
-CREATE TABLE `eznotification` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `owner_id` int(11) NOT NULL,
-  `is_pending` tinyint(1) NOT NULL DEFAULT '1',
-  `type` varchar(128) NOT NULL,
-  `created` int(11) NOT NULL,
-  `data` blob NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `owner_id` (`owner_id`),
-  KEY `is_pending` (`is_pending`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+--
+-- Date Based Publisher
+--
 
 DROP TABLE IF EXISTS `ezdatebasedpublisher_scheduled_version`;
 CREATE TABLE `ezdatebasedpublisher_scheduled_version` (
@@ -55,13 +50,13 @@ CREATE TABLE `ezdatebasedpublisher_scheduled_version` (
   `publication_date` int(11) NOT NULL,
   `url_root` VARCHAR(255) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE KEY `index4` (`content_id`,`version_number`),
-  KEY `index2` (`content_id`),
-  KEY `index3` (`version_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  UNIQUE KEY `content_id_version_number` (`content_id`,`version_number`),
+  KEY `content_id` (`content_id`),
+  KEY `version_id` (`version_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Page FieldType
+-- Page Builder
 --
 
 DROP TABLE IF EXISTS `ezpage_attributes`;
@@ -70,7 +65,7 @@ CREATE TABLE `ezpage_attributes` (
   `name` varchar(255) NOT NULL DEFAULT '',
   `value` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_blocks`;
 CREATE TABLE `ezpage_blocks` (
@@ -79,7 +74,7 @@ CREATE TABLE `ezpage_blocks` (
   `view` varchar(255) NOT NULL DEFAULT '',
   `name` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_blocks_design`;
 CREATE TABLE `ezpage_blocks_design` (
@@ -89,7 +84,7 @@ CREATE TABLE `ezpage_blocks_design` (
   `compiled` TEXT DEFAULT NULL,
   `class` VARCHAR(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_blocks_visibility`;
 CREATE TABLE `ezpage_blocks_visibility` (
@@ -98,27 +93,27 @@ CREATE TABLE `ezpage_blocks_visibility` (
   `since` INT(11) DEFAULT NULL,
   `till` INT(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_attributes_blocks`;
 CREATE TABLE `ezpage_map_attributes_blocks` (
   `attribute_id` int(11) NOT NULL,
   `block_id` int(11) NOT NULL,
   PRIMARY KEY (`attribute_id`,`block_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_blocks_zones`;
 CREATE TABLE `ezpage_map_blocks_zones` (
   `block_id` int(11) NOT NULL,
   `zone_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_map_zones_pages`;
 CREATE TABLE `ezpage_map_zones_pages` (
   `zone_id` int(11) NOT NULL,
   `page_id` int(11) NOT NULL,
   PRIMARY KEY (`zone_id`,`page_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_pages`;
 CREATE TABLE `ezpage_pages` (
@@ -128,11 +123,11 @@ CREATE TABLE `ezpage_pages` (
   `language_code` varchar(255) NOT NULL DEFAULT '',
   `layout` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 DROP TABLE IF EXISTS `ezpage_zones`;
 CREATE TABLE `ezpage_zones` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
