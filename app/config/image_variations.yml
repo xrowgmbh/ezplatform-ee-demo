@@ -33,3 +33,9 @@ ezpublish:
                     filters:
                         - {name: geometry/scaleheight, params: [500]}
                         - {name: geometry/crop, params: [1100, 500, 650, 0]}
+
+                place:
+                    reference: null
+                    filters:
+                        - { name: geometry/scaledownonly, params: [420, 370] }
+                        - { name: geometry/crop, params: [420, 270, 0, 0] }
