@@ -150,11 +150,16 @@
             </div>
         </div>
     </section>
+{% endblock %}
 
 
-    <script>
-        $(function () {
-            var checkedCheckboxes,
+{%  block javascripts %}
+    {{ parent() }}
+
+    <script type="text/javascript">
+        jQuery(function () {
+            let $ = jQuery,
+                checkedCheckboxes,
                 countCheckedCheckboxes = function () {
                     checkedCheckboxes = $('.filters input:checkbox:checked').length;
                     $('.section-search .btn-filters .badge').html(checkedCheckboxes > 0 ? checkedCheckboxes : '');

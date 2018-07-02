@@ -63,3 +63,22 @@ blockquote {
     text-align: center;
     clear: both;
 }
+
+.align-left {
+    float: left;
+    padding-right: 20px;
+}
+
+.align-right {
+    float: right;
+    padding-left: 20px;
+}
+
+.align-center {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.user-menu li.username {
+    padding: .5em 1em;
+}

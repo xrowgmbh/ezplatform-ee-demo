@@ -36,10 +36,10 @@
             <ul class="mr-auto">
                 {% if app.user %}
                     {% set user = app.user.getAPIUser().content %}
-                        <li class="nav-item username">{{ ez_content_name(user) }}</li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a>
-                        </li>
+                    <li class="nav-item username">{{ ez_content_name(user) }}</li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('logout') }}" title="{{ 'logout'|trans }}">{{ 'logout'|trans }}</a>
+                    </li>
                 {% else %}
                     <li class="nav-item">
                         <a class="nav-link" href="/register">Register</a>
