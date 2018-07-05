@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe204f8b353e198c9f6030aeb938dd79",
+    "content-hash": "62b85069d42b1c88d63f50aa24b8f41f",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1268,24 +1268,24 @@
         },
         {
             "name": "ezsystems/ezplatform-admin-ui",
-            "version": "v1.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezplatform-admin-ui.git",
-                "reference": "40b621893acf9b3ae3fb602e0278dc6e6060071e"
+                "reference": "289ed91b5a8d278162cae20824cad44eb22044d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezplatform-admin-ui/zipball/40b621893acf9b3ae3fb602e0278dc6e6060071e",
-                "reference": "40b621893acf9b3ae3fb602e0278dc6e6060071e",
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-admin-ui/zipball/289ed91b5a8d278162cae20824cad44eb22044d9",
+                "reference": "289ed91b5a8d278162cae20824cad44eb22044d9",
                 "shasum": ""
             },
             "require": {
-                "ezsystems/ez-support-tools": "^0.2",
-                "ezsystems/ezplatform-admin-ui-modules": "^1.2",
-                "ezsystems/ezplatform-design-engine": "^2.0",
-                "ezsystems/ezpublish-kernel": "^7.2",
-                "ezsystems/repository-forms": "^2.2",
+                "ezsystems/ez-support-tools": "^0.2@dev",
+                "ezsystems/ezplatform-admin-ui-modules": "^1.1@dev",
+                "ezsystems/ezplatform-design-engine": "^2.0@dev",
+                "ezsystems/ezpublish-kernel": "^7.1@dev",
+                "ezsystems/repository-forms": "^2.1@dev",
                 "jms/translation-bundle": "^1.3.2",
                 "knplabs/knp-menu-bundle": "^2.1",
                 "php": ">=7.1",
@@ -1316,7 +1316,7 @@
                 "GPL-2.0-only"
             ],
             "description": "eZ Platform Admin v2",
-            "time": "2018-06-29T11:30:20+00:00"
+            "time": "2018-07-05T12:22:38+00:00"
         },
         {
             "name": "ezsystems/ezplatform-admin-ui-assets",
@@ -1356,16 +1356,16 @@
         },
         {
             "name": "ezsystems/ezplatform-admin-ui-modules",
-            "version": "v1.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezplatform-admin-ui-modules.git",
-                "reference": "6f7584477f66b9dbf8b495a6c2364432da0b1397"
+                "reference": "9255f23c7a2895b3f6ef17483904a7607c97e305"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezplatform-admin-ui-modules/zipball/6f7584477f66b9dbf8b495a6c2364432da0b1397",
-                "reference": "6f7584477f66b9dbf8b495a6c2364432da0b1397",
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-admin-ui-modules/zipball/9255f23c7a2895b3f6ef17483904a7607c97e305",
+                "reference": "9255f23c7a2895b3f6ef17483904a7607c97e305",
                 "shasum": ""
             },
             "require": {
@@ -1393,7 +1393,7 @@
                 }
             ],
             "description": "External assets dependencies for EzPlatform AdminUI",
-            "time": "2018-06-29T14:49:51+00:00"
+            "time": "2018-07-05T11:51:59+00:00"
         },
         {
             "name": "ezsystems/ezplatform-automated-translation",
@@ -1705,23 +1705,23 @@
         },
         {
             "name": "ezsystems/ezplatform-page-builder",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/ezplatform-page-builder.git",
-                "reference": "f439e2bc30b146d6d7f4d394fecf937422101516"
+                "reference": "a184cb84de62fc5c720d2268ce872d9cb11bc741"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezplatform-page-builder-f439e2bc30b146d6d7f4d394fecf937422101516-zip-cf1437.zip",
-                "reference": "f439e2bc30b146d6d7f4d394fecf937422101516",
-                "shasum": "8a079d9b0399448fdcc05c1b20fb0ecff2bdd8bd"
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-page-builder/zipball/a184cb84de62fc5c720d2268ce872d9cb11bc741",
+                "reference": "a184cb84de62fc5c720d2268ce872d9cb11bc741",
+                "shasum": ""
             },
             "require": {
-                "ezsystems/ezplatform-admin-ui": "^1.2",
-                "ezsystems/ezplatform-page-fieldtype": "^1.0",
-                "ezsystems/ezpublish-kernel": "^7.2",
-                "ezsystems/repository-forms": "^2.2"
+                "ezsystems/ezplatform-admin-ui": "^1.1",
+                "ezsystems/ezplatform-page-fieldtype": "^1.0@dev",
+                "ezsystems/ezpublish-kernel": "^7.0",
+                "ezsystems/repository-forms": "^2.1"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "2.7.*",
@@ -1746,30 +1746,30 @@
             ],
             "description": "eZ Platform Page Builder",
             "support": {
-                "source": "https://github.com/ezsystems/ezplatform-page-builder/tree/v1.0.0",
+                "source": "https://github.com/ezsystems/ezplatform-page-builder/tree/master",
                 "issues": "https://github.com/ezsystems/ezplatform-page-builder/issues"
             },
-            "time": "2018-06-29T12:22:39+00:00"
+            "time": "2018-07-05T11:02:02+00:00"
         },
         {
             "name": "ezsystems/ezplatform-page-fieldtype",
-            "version": "v1.0.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:ezsystems/ezplatform-page-fieldtype.git",
-                "reference": "2fd38a8b7b71f3c6a9728a3561838d9e072dfa7b"
+                "reference": "72b39aa27a640c562ec1ca6fd4745fb950d4c13d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://updates.ez.no/ttl/dist/ezsystems-ezplatform-page-fieldtype-2fd38a8b7b71f3c6a9728a3561838d9e072dfa7b-zip-e07556.zip",
-                "reference": "2fd38a8b7b71f3c6a9728a3561838d9e072dfa7b",
-                "shasum": "5577c26ee4dfc5d3e3dad29ba8ff9cee168faff5"
+                "url": "https://api.github.com/repos/ezsystems/ezplatform-page-fieldtype/zipball/72b39aa27a640c562ec1ca6fd4745fb950d4c13d",
+                "reference": "72b39aa27a640c562ec1ca6fd4745fb950d4c13d",
+                "shasum": ""
             },
             "require": {
                 "doctrine/dbal": "^2.7",
                 "ezsystems/ezplatform-http-cache": "^0.7",
-                "ezsystems/ezpublish-kernel": "^7.2",
-                "ezsystems/repository-forms": "^2.2",
+                "ezsystems/ezpublish-kernel": "^7.1",
+                "ezsystems/repository-forms": "^2.1",
                 "jms/serializer": "^1.11",
                 "nicmart/tree": "^0.2",
                 "php": ">=7.1",
@@ -1808,10 +1808,10 @@
             ],
             "description": "eZ Platform Page FieldType",
             "support": {
-                "source": "https://github.com/ezsystems/ezplatform-page-fieldtype/tree/v1.0.0",
+                "source": "https://github.com/ezsystems/ezplatform-page-fieldtype/tree/master",
                 "issues": "https://github.com/ezsystems/ezplatform-page-fieldtype/issues"
             },
-            "time": "2018-06-29T12:16:00+00:00"
+            "time": "2018-07-05T12:48:13+00:00"
         },
         {
             "name": "ezsystems/ezplatform-solr-search-engine",
@@ -1909,16 +1909,16 @@
         },
         {
             "name": "ezsystems/ezpublish-kernel",
-            "version": "v7.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ezsystems/ezpublish-kernel.git",
-                "reference": "5ee5a603ec236e94f428db4932aa3f941838d096"
+                "reference": "5807e5145a370c9b81434df8f93c4ae92bc5b9f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/5ee5a603ec236e94f428db4932aa3f941838d096",
-                "reference": "5ee5a603ec236e94f428db4932aa3f941838d096",
+                "url": "https://api.github.com/repos/ezsystems/ezpublish-kernel/zipball/5807e5145a370c9b81434df8f93c4ae92bc5b9f4",
+                "reference": "5807e5145a370c9b81434df8f93c4ae92bc5b9f4",
                 "shasum": ""
             },
             "require": {
@@ -1997,7 +1997,7 @@
             ],
             "description": "Kernel used by ezsystems/ezplatform and derivatives. Provides the Content Repository, its APIs, and the application's Symfony framework integration.",
             "homepage": "https://ezplatform.com",
-            "time": "2018-06-29T11:35:44+00:00"
+            "time": "2018-07-05T10:56:13+00:00"
         },
         {
             "name": "ezsystems/flex-workflow",
@@ -4682,16 +4682,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.15",
+            "version": "v2.0.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09"
+                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/10bcb46e8f3d365170f6de9d05245aa066b81f09",
-                "reference": "10bcb46e8f3d365170f6de9d05245aa066b81f09",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/29af24f25bab834fcbb38ad2a69fa93b867e070d",
+                "reference": "29af24f25bab834fcbb38ad2a69fa93b867e070d",
                 "shasum": ""
             },
             "require": {
@@ -4727,7 +4727,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2018-06-08T15:26:40+00:00"
+            "time": "2018-07-04T16:31:37+00:00"
         },
         {
             "name": "php-http/httplug",
@@ -5407,12 +5407,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "0e4ea9f9e1fd3c6a563524f8f399696d98c7c85a"
+                "reference": "0253937ef2720f45fbe421e3ba486587b3080c35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0e4ea9f9e1fd3c6a563524f8f399696d98c7c85a",
-                "reference": "0e4ea9f9e1fd3c6a563524f8f399696d98c7c85a",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/0253937ef2720f45fbe421e3ba486587b3080c35",
+                "reference": "0253937ef2720f45fbe421e3ba486587b3080c35",
                 "shasum": ""
             },
             "conflict": {
@@ -5463,7 +5463,7 @@
                 "laravel/socialite": ">=1,<1.0.99|>=2,<2.0.10",
                 "magento/magento1ce": ">=1.5.0.1,<1.9.3.2",
                 "magento/magento1ee": ">=1.9,<1.14.3.2",
-                "magento/magento2ce": ">=2,<2.2",
+                "magento/product-community-edition": ">=2,<2.2.5",
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
                 "onelogin/php-saml": "<2.10.4",
@@ -5514,7 +5514,7 @@
                 "symfony/web-profiler-bundle": ">=2,<2.3.19|>=2.4,<2.4.9|>=2.5,<2.5.4",
                 "symfony/yaml": ">=2,<2.0.22|>=2.1,<2.1.7",
                 "thelia/backoffice-default-template": ">=2.1,<2.1.2",
-                "thelia/thelia": ">=2.1,<2.1.2|>=2.1.0-beta1,<2.1.3",
+                "thelia/thelia": ">=2.1.0-beta1,<2.1.3|>=2.1,<2.1.2",
                 "titon/framework": ">=0,<9.9.99",
                 "twig/twig": "<1.20",
                 "typo3/cms": ">=6.2,<6.2.30|>=7,<7.6.22|>=8,<8.7.5",
@@ -5566,7 +5566,7 @@
                 }
             ],
             "description": "Prevents installation of composer packages with known security vulnerabilities: no API, simply require it",
-            "time": "2018-06-08T09:55:50+00:00"
+            "time": "2018-07-04T05:48:21+00:00"
         },
         {
             "name": "sensio/distribution-bundle",
@@ -5738,16 +5738,16 @@
         },
         {
             "name": "swiftmailer/swiftmailer",
-            "version": "v6.0.2",
+            "version": "v6.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "412333372fb6c8ffb65496a2bbd7321af75733fc"
+                "reference": "aa899fef280b1c1aec8d5d4ac069af7f80c89a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/412333372fb6c8ffb65496a2bbd7321af75733fc",
-                "reference": "412333372fb6c8ffb65496a2bbd7321af75733fc",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/aa899fef280b1c1aec8d5d4ac069af7f80c89a23",
+                "reference": "aa899fef280b1c1aec8d5d4ac069af7f80c89a23",
                 "shasum": ""
             },
             "require": {
@@ -5758,10 +5758,14 @@
                 "mockery/mockery": "~0.9.1",
                 "symfony/phpunit-bridge": "~3.3@dev"
             },
+            "suggest": {
+                "ext-intl": "Needed to support internationalized email addresses",
+                "true/punycode": "Needed to support internationalized email addresses, if ext-intl is not installed"
+            },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.0-dev"
+                    "dev-master": "6.1-dev"
                 }
             },
             "autoload": {
@@ -5783,13 +5787,13 @@
                 }
             ],
             "description": "Swiftmailer, free feature-rich PHP mailer",
-            "homepage": "http://swiftmailer.symfony.com",
+            "homepage": "https://swiftmailer.symfony.com",
             "keywords": [
                 "email",
                 "mail",
                 "mailer"
             ],
-            "time": "2017-09-30T22:39:41+00:00"
+            "time": "2018-07-04T11:12:44+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -8568,16 +8572,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "6.5.8",
+            "version": "6.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "4f21a3c6b97c42952fd5c2837bb354ec0199b97b"
+                "reference": "093ca5508174cd8ab8efe44fd1dde447adfdec8f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4f21a3c6b97c42952fd5c2837bb354ec0199b97b",
-                "reference": "4f21a3c6b97c42952fd5c2837bb354ec0199b97b",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/093ca5508174cd8ab8efe44fd1dde447adfdec8f",
+                "reference": "093ca5508174cd8ab8efe44fd1dde447adfdec8f",
                 "shasum": ""
             },
             "require": {
@@ -8648,7 +8652,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-04-10T11:38:34+00:00"
+            "time": "2018-07-03T06:40:40+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -9482,6 +9486,11 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "ezsystems/ezpublish-kernel": 20,
+        "ezsystems/ezplatform-admin-ui": 20,
+        "ezsystems/ezplatform-admin-ui-modules": 20,
+        "ezsystems/ezplatform-page-fieldtype": 20,
+        "ezsystems/ezplatform-page-builder": 20,
         "ezsystems/ezplatform-automated-translation": 5,
         "roave/security-advisories": 20,
         "ezsystems/comments-bundle": 20
