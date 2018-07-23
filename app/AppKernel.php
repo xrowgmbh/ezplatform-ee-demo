@@ -30,7 +30,6 @@ class AppKernel extends Kernel
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
             new Novactive\Bundle\eZSEOBundle\NovaeZSEOBundle(),
             new Kaliop\eZMigrationBundle\EzMigrationBundle(),
-            new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
             // eZ Systems
             new EzSystems\PlatformHttpCacheBundle\EzSystemsPlatformHttpCacheBundle(),
             new EzSystems\PlatformFastlyCacheBundle\EzSystemsPlatformFastlyCacheBundle(),
@@ -52,6 +51,7 @@ class AppKernel extends Kernel
             new EzSystems\EzPlatformCronBundle\EzPlatformCronBundle(),
             new EzSystems\CommentsBundle\EzSystemsCommentsBundle(),
             // Dependencies
+            new Lolautruche\EzCoreExtraBundle\EzCoreExtraBundle(),
             new Netgen\TagsBundle\NetgenTagsBundle(),
             // eZ Platform EE
             new EzSystems\EzPlatformPageFieldTypeBundle\EzPlatformPageFieldTypeBundle(),
