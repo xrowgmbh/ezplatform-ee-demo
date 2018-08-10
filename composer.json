@@ -61,7 +61,7 @@
         "doctrine/doctrine-bundle": "~1.6.13 | ^1.9.1",
         "sensio/framework-extra-bundle": "^3.0.29",
         "components/handlebars.js": "~3.0.0",
-        "ezsystems/recommendation-bundle": "^2.0@dev",
+        "ezsystems/recommendation-bundle": "~2.0.0",
         "ramsey/uuid": "^3.5",
         "gregwar/captcha": "^1.1",
         "ezsystems/ezstudio-cron": "^1.0@dev",
