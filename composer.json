@@ -3,7 +3,7 @@
     "description": "eZ Platform Enterprise Edition Demo distribution",
     "homepage": "https://github.com/ezsystems/ezplatform-ee-demo",
     "license": "proprietary",
-    "type": "project",
+    "type": "metapackage",
     "authors": [
         {
             "name": "eZ dev-team & eZ Community",
